@@ -64,6 +64,34 @@ npx firebase-tools deploy --only firestore:rules,functions -P project-for-manage
 | `lib/backend/` | Firestore records and queries |
 | `firebase/` | Security rules and Cloud Functions |
 
+## Music credits
+
+The songs bundled in `assets/` are royalty-free tracks by the artists below.
+
+Kevin MacLeod's music is licensed under
+[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/),
+which requires this attribution:
+
+- "Back on Track - Latinesque" by Kevin MacLeod (incompetech.com)
+- "Bushwick Tarentella Loop" by Kevin MacLeod (incompetech.com)
+- "Gnarled Situation" by Kevin MacLeod (incompetech.com)
+
+Licensed under Creative Commons: By Attribution 4.0 License.
+
+| Track | Artist | File |
+| --- | --- | --- |
+| Back on Track - Latinesque | Kevin MacLeod | `assets/videos/Back_on_Track_-_Latinesque_-_Kevin_MacLeod.mp3` |
+| Bushwick Tarentella Loop | Kevin MacLeod | `assets/videos/Bushwick_Tarentella_Loop_-_Kevin_MacLeod.mp3` |
+| Gnarled Situation | Kevin MacLeod | `assets/videos/Gnarled_Situation_-_Kevin_MacLeod.mp3` |
+| Precipice | Twin Musicom | `assets/videos/Precipice_-_Twin_Musicom.mp3` |
+| Race Car | Rondo Brothers | `assets/videos/Race_Car_-_Rondo_Brothers.mp3` |
+| This Or That | TrackTribe | `assets/videos/This_Or_That_-_TrackTribe.mp3` |
+| Ten | Anno Domini Beats | `assets/audios/Ten_-_Anno_Domini_Beats.mp3` |
+
+The tracks by Twin Musicom, Rondo Brothers, TrackTribe and Anno Domini Beats
+come from the YouTube Audio Library. Their files carry no license text, so check
+each one's terms in the library before reusing them outside this project.
+
 ## Note on FlutterFlow
 
 The project was first generated with FlutterFlow and then edited by hand.
