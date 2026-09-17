@@ -1,0 +1,32 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "userPost",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "post_user",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "created_at",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Music",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "SongName",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Genres",
+          "arrayConfig": "CONTAINS"
+        }
+      ]
+    }
+  ]
+}

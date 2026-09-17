@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function me() {
+      return /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    // Accepting a request or unfriending edits the other person's friends
+    // list too, but only to add or remove yourself.
+    function onlyTogglesMeInFriends() {
+      let before = resource.data.get('friends', []).toSet();
+      let after = request.resource.data.get('friends', []).toSet();
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['friends'])
+        && after.difference(before).union(before.difference(after)).hasOnly([me()]);
+    }
+
+    match /users/{document} {
+      // Signed-in users can find each other and see friends' names.
+      allow read: if signedIn();
+      allow create, delete: if signedIn() && request.auth.uid == document;
+      allow update: if signedIn()
+        && (request.auth.uid == document || onlyTogglesMeInFriends());
+    }
+
+    match /Music/{document} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if false;
+    }
+
+    match /users/{parent}/userPost/{document} {
+      allow create, update, delete: if signedIn() && request.auth.uid == parent;
+    }
+
+    // The home feed reads friends' posts with a collection group query.
+    match /{path=**}/userPost/{document} {
+      allow read: if signedIn();
+    }
+
+    match /friend_requests/{document} {
+      allow read, delete: if signedIn()
+        && (resource.data.receiver == me() || resource.data.sender == me());
+      allow create: if signedIn()
+        && request.resource.data.sender == me()
+        && request.resource.data.status == 'pending';
+      // Only the receiver answers a request.
+      allow update: if signedIn()
+        && resource.data.receiver == me()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status']);
+    }
+  }
+}

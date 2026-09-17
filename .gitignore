@@ -1,0 +1,42 @@
+# Flutter / Dart build output
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# IDEs and OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Android
+android/.gradle/
+android/local.properties
+android/**/gradle-wrapper.jar
+android/captures/
+*.keystore
+*.jks
+key.properties
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/ephemeral/
+**/xcuserdata/
+
+# Firebase
+firebase/**/node_modules/
+firebase/.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Local backups
+*.bak

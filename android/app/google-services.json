@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1032725524363",
+    "project_id": "project-for-management-sugxvo",
+    "storage_bucket": "project-for-management-sugxvo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032725524363:android:a4b140617ffa883148498e",
+        "android_client_info": {
+          "package_name": "com.mycompany.grovegroove"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyeM2D_98I8ahtvo4KppRe-P3IJPmX7c0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">ProjectForManagement</string>
+    <string name="facebook_app_id">test</string>
+    <string name="fb_login_protocol_scheme">fbtest</string>
+     <string name="facebook_client_token">https://project-for-management-sugxvo.firebaseapp.com/__/auth/handler</string>
+          
+</resources>
