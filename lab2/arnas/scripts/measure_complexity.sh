@@ -37,4 +37,7 @@ dart pub global run dart_code_linter:metrics analyze lib/pages/home \
     --reporter=json --json-path="$OUT/dcl.json" >/dev/null 2>&1 || true
 dart pub global run dart_code_linter:metrics analyze lib/pages/home \
     --reporter=html --output-directory="$OUT/dcl_html" >/dev/null 2>&1 || true
-echo "Originalios ataskaitos: $OUT/dcl.json, $OUT/dcl_html/lib/pages/home/home_widget.html"
+# Viso lib/ MI pasiskirstymui (6.1): python3 lab2/arnas/scripts/mi_check.py
+dart pub global run dart_code_linter:metrics analyze lib \
+    --reporter=json --json-path="$OUT/dcl_lib.json" >/dev/null 2>&1 || true
+echo "Originalios ataskaitos: $OUT/dcl.json, $OUT/dcl_lib.json, $OUT/dcl_html/lib/pages/home/home_widget.html"

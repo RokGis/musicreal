@@ -59,9 +59,11 @@ lab2/arnas/
   scripts/run_tests_and_coverage.sh    LD1 ir LD2 testai, analizatorius, padengimas
   scripts/function_coverage.py         funkcijų padengimas iš LCOV + AST žemėlapio, matricos
   scripts/screenshot.py                ekrano kopijos iš žurnalų ir HTML ataskaitų
+  scripts/mi_check.py                  MI formulės patikrinimas ir viso lib/ MI pasiskirstymas (6.1)
   tools/coverage_map/                  Dart AST įrankis: sakiniai ir sprendimai
   results/env.txt                      aplinka
-  results/metrics/                     cognitive.txt/json, dcl_console.txt, dcl.json, dcl_html/
+  results/metrics/                     cognitive.txt/json, dcl_console.txt, dcl.json, dcl_html/,
+                                       dcl_lib.json (visas lib/), mi_check.txt
   results/coverage_map.json            AST sakinių ir sprendimų sąrašas
   results/baseline_ld1/                LD1 testų žurnalas, lcov.info, padengimas, matrica
   results/first_version/               pirmasis LD2 testų variantas (prieš paleidimą), SHA256SUMS,
@@ -132,6 +134,7 @@ apkirpta dart_code_linter HTML ataskaita. Tekstas rodomas toks, kokį įrašė �
 | 09, 10 | LD2 ir LD1 padengimo matricos |
 | 11 | Integracinis testas I01 |
 | 12 | Pirmojo ir galutinio varianto skirtumai |
+| 13 | MI formulės patikrinimas ir viso lib/ MI pasiskirstymas |
 
 ## Apribojimai
 
