@@ -71,6 +71,7 @@ lab2/arnas/
   results/final/                       galutiniai žurnalai, lcov failai, padengimas, matrica,
                                        fixes.diff, pakartotiniai ir atsitiktinės tvarkos paleidimai
   results/screenshots/                 01–12 ekrano kopijos
+  testai/                              visų testų ir jų rezultatų kopijos vienoje vietoje (README.txt)
 test/ld2_arnas/
   friends_feed_query_test.dart         Q01–Q09 (friendsFeedQuery)
   friend_feed_build_test.dart          F01–F07 (FriendFeed.build)

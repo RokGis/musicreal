@@ -1,0 +1,113 @@
+00:00 +0: loading /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart
+00:00 +0: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-02 — confirmed friend's post of today is in the feed
+00:00 +1: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-03 — confirmed friend's post from yesterday is not in the feed
+00:00 +2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-03 (BVA) — 00:00:00 today is in, 23:59:59 yesterday is out
+00:00 +3: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-07 — one post appears exactly once, on every refresh
+00:00 +4: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-13 — a non-friend's post of today is not in the feed
+00:00 +5: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-01 — pending request: post of today is not in the feed
+00:00 +6: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-04 — request sent by me, still pending: not in the feed
+00:00 +7: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-04 — declined request: not in the feed
+00:00 +8: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC3/AC4 — friendship changes apply on the next refresh SCRUM-49 / TC-FEAT49-05 — accepted request: new friend's post of today appears
+00:00 +9: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 AC3/AC4 — friendship changes apply on the next refresh SCRUM-49 / TC-FEAT49-06 — removed friend: their posts disappear
+00:00 +10: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 error-based — unusual data SCRUM-49 / TC-FEAT49-13 — a post without created_at is not shown as a post of today
+00:00 +11: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_query_test.dart: SCRUM-49 error-based — unusual data SCRUM-49 / TC-FEAT49-13 — friends with several posts today: all of them, none twice
+00:00 +12: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-01 — no friends: an empty-feed message is shown
+00:00 +13: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-02 — friends, no posts today: the SAME message as with no friends
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: 'Your feed is empty'
+  Actual: 'No posts today'
+   Which: is different.
+          Expected: Your feed  ...
+            Actual: No posts t ...
+                    ^
+           Differ at offset 0
+TC-US67-02 expects the same "nothing to show" message as TC-US67-01 (R1)
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart:87:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart line 87
+The test description was:
+  SCRUM-67 / TC-US67-02 — friends, no posts today: the SAME message as with no friends
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +13 -1: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-02 — friends, no posts today: the SAME message as with no friends [E]
+  Test failed. See exception logs above.
+  The test description was: SCRUM-67 / TC-US67-02 — friends, no posts today: the SAME message as with no friends
+  
+00:01 +13 -1: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-49 / TC-FEAT49-09 — both empty cases show the same empty-feed message
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: ['Your feed is empty']
+  Actual: [
+            'No posts today',
+            'The feed shows what your friends posted today. Nothing yet — check back later.'
+          ]
+   Which: at location [0] is 'No posts today' instead of 'Your feed is empty'
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart:103:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart line 103
+The test description was:
+  SCRUM-49 / TC-FEAT49-09 — both empty cases show the same empty-feed message
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +13 -2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-49 / TC-FEAT49-09 — both empty cases show the same empty-feed message [E]
+  Test failed. See exception logs above.
+  The test description was: SCRUM-49 / TC-FEAT49-09 — both empty cases show the same empty-feed message
+  
+00:01 +13 -2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-03 — a friend posted today: the post is shown with name, song and emotion
+00:01 +14 -2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-04 — every post shows the emotion its author picked
+00:01 +15 -2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-05 — every post shows its author's account name
+00:01 +16 -2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-49 / TC-FEAT49-08 — a post shows author name, song name and emotion
+00:01 +17 -2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-49 / TC-FEAT49-07 — refreshing does not duplicate a post
+00:01 +18 -2: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-49 AC7 — data loading failure SCRUM-49 / TC-FEAT49-10 — loading failure: error message with a retry action, not the empty message
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: true
+  Actual: <false>
+expected an error message; texts on screen: [], loading spinner shown: true
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart:227:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart line 227
+The test description was:
+  SCRUM-49 / TC-FEAT49-10 — loading failure: error message with a retry action, not the empty
+  message
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +18 -3: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-49 AC7 — data loading failure SCRUM-49 / TC-FEAT49-10 — loading failure: error message with a retry action, not the empty message [E]
+  Test failed. See exception logs above.
+  The test description was: SCRUM-49 / TC-FEAT49-10 — loading failure: error message with a retry action, not the empty message
+  
+00:01 +18 -3: /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 / SCRUM-49 error-based — incomplete posts SCRUM-49 / TC-FEAT49-13 — a post without an emotion still renders, with a placeholder
+00:02 +19 -3: Some tests failed.
+
+Failing tests:
+  /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-49 AC7 — data loading failure SCRUM-49 / TC-FEAT49-10 — loading failure: error message with a retry action, not the empty message
+  /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-49 / TC-FEAT49-09 — both empty cases show the same empty-feed message
+  /home/arnas/Documents/GitHub/musicreal/test/tests/feed_widget_test.dart: SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-02 — friends, no posts today: the SAME message as with no friends

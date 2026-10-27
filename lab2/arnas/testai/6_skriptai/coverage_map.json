@@ -1,0 +1,140 @@
+{
+  "file": "lib/pages/home/home_widget.dart",
+  "friendsFeedQuery": {
+    "start_line": 182,
+    "end_line": 192,
+    "statements": [
+      {
+        "id": "S1",
+        "kind": "ExpressionFunctionBody (=>)",
+        "start_line": 188,
+        "end_line": 192,
+        "text": "userPostRecord"
+      }
+    ],
+    "decisions": [],
+    "other_decision_constructs": [],
+    "null_aware_operators": []
+  },
+  "FriendFeed.build": {
+    "start_line": 345,
+    "end_line": 393,
+    "statements": [
+      {
+        "id": "S1",
+        "kind": "VariableDeclarationStatement",
+        "start_line": 347,
+        "end_line": 347,
+        "text": "final friends = source.friends();"
+      },
+      {
+        "id": "S2",
+        "kind": "IfStatement",
+        "start_line": 349,
+        "end_line": 363,
+        "text": "if (friends.isEmpty) {"
+      },
+      {
+        "id": "S3",
+        "kind": "ReturnStatement",
+        "start_line": 350,
+        "end_line": 362,
+        "text": "return AppUi.emptyState("
+      },
+      {
+        "id": "S4",
+        "kind": "ExpressionStatement",
+        "start_line": 357,
+        "end_line": 357,
+        "text": "context.pushNamed(FriendsListAddFriendWidget.routeName);"
+      },
+      {
+        "id": "S5",
+        "kind": "ReturnStatement",
+        "start_line": 365,
+        "end_line": 392,
+        "text": "return StreamBuilder<List<UserPostRecord>>("
+      },
+      {
+        "id": "S6",
+        "kind": "IfStatement",
+        "start_line": 368,
+        "end_line": 373,
+        "text": "if (!snapshot.hasData) {"
+      },
+      {
+        "id": "S7",
+        "kind": "ReturnStatement",
+        "start_line": 369,
+        "end_line": 372,
+        "text": "return Padding("
+      },
+      {
+        "id": "S8",
+        "kind": "VariableDeclarationStatement",
+        "start_line": 374,
+        "end_line": 374,
+        "text": "final posts = snapshot.data!;"
+      },
+      {
+        "id": "S9",
+        "kind": "IfStatement",
+        "start_line": 375,
+        "end_line": 383,
+        "text": "if (posts.isEmpty) {"
+      },
+      {
+        "id": "S10",
+        "kind": "ReturnStatement",
+        "start_line": 376,
+        "end_line": 382,
+        "text": "return AppUi.emptyState("
+      },
+      {
+        "id": "S11",
+        "kind": "ReturnStatement",
+        "start_line": 384,
+        "end_line": 390,
+        "text": "return ListView.builder("
+      },
+      {
+        "id": "S12",
+        "kind": "ExpressionFunctionBody (=>)",
+        "start_line": 389,
+        "end_line": 389,
+        "text": "_postCard(context, posts[index])"
+      }
+    ],
+    "decisions": [
+      {
+        "id": "D1",
+        "kind": "IfStatement",
+        "line": 349,
+        "condition": "friends.isEmpty",
+        "true_witness": "S3",
+        "false_witness": "S5",
+        "false_rule": "kitas sakinys po if (then šaka baigiasi return/throw)"
+      },
+      {
+        "id": "D2",
+        "kind": "IfStatement",
+        "line": 368,
+        "condition": "!snapshot.hasData",
+        "true_witness": "S7",
+        "false_witness": "S8",
+        "false_rule": "kitas sakinys po if (then šaka baigiasi return/throw)"
+      },
+      {
+        "id": "D3",
+        "kind": "IfStatement",
+        "line": 375,
+        "condition": "posts.isEmpty",
+        "true_witness": "S10",
+        "false_witness": "S11",
+        "false_rule": "kitas sakinys po if (then šaka baigiasi return/throw)"
+      }
+    ],
+    "other_decision_constructs": [],
+    "null_aware_operators": []
+  }
+}

@@ -1,0 +1,48 @@
+# Padengimo matrica: test/ld2_arnas/friends_feed_query_test.dart, test/ld2_arnas/friend_feed_build_test.dart, test/ld2_arnas/feed_integration_test.dart
+
+Kiekvienas testas paleistas atskirai (`--plain-name`). ✓ – sakinys įvykdytas arba sprendimo baigtis pasiekta.
+
+## friendsFeedQuery
+
+| Testas | S1 |
+|---|---|
+| friendsFeedQuery Q01 friend posted today → post returned | ✓ |
+| friendsFeedQuery Q02 several friends posted today → all returned, newest first | ✓ |
+| friendsFeedQuery Q03 post at 00:00:00 today → included, 23:59:59 yesterday → excluded | ✓ |
+| friendsFeedQuery Q04 now at 23:59:59 → early post of the same day still included | ✓ |
+| friendsFeedQuery Q05 post dated after now (tomorrow) → included | ✓ |
+| friendsFeedQuery Q06 non-friend posted today → post not returned | ✓ |
+| friendsFeedQuery Q07 post without created_at → not returned | ✓ |
+| friendsFeedQuery Q09 more than 30 friends → query fails with ArgumentError | ✓ |
+| friendsFeedQuery with the real cloud_firestore query code Q08 empty friends list → no friend filter, every post of today returned | ✓ |
+| FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested |  |
+| FriendFeed.build F02 friends with two posts → both shown in stream order with author and song |  |
+| FriendFeed.build F03 friends, no posts today → "No posts today" state |  |
+| FriendFeed.build F04 tap "Find friends" → friend search route opened |  |
+| FriendFeed.build F05 friends, posts not loaded yet → loader, no empty-feed message |  |
+| FriendFeed.build F06 posts arrive after loading → loader replaced by the post |  |
+| FriendFeed.build F07 posts stream fails → loader stays, no error or empty message |  |
+| feed integration I01 posts in the database → real feed shows only the friend's post of today | ✓ |
+
+## FriendFeed.build
+
+| Testas | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 | S10 | S11 | S12 | D1T | D1F | D2T | D2F | D3T | D3F |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| friendsFeedQuery Q01 friend posted today → post returned |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery Q02 several friends posted today → all returned, newest first |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery Q03 post at 00:00:00 today → included, 23:59:59 yesterday → excluded |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery Q04 now at 23:59:59 → early post of the same day still included |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery Q05 post dated after now (tomorrow) → included |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery Q06 non-friend posted today → post not returned |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery Q07 post without created_at → not returned |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery Q09 more than 30 friends → query fails with ArgumentError |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| friendsFeedQuery with the real cloud_firestore query code Q08 empty friends list → no friend filter, every post of today returned |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested | ✓ | ✓ | ✓ |  |  |  |  |  |  |  |  |  | ✓ |  |  |  |  |  |
+| FriendFeed.build F02 friends with two posts → both shown in stream order with author and song | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+| FriendFeed.build F03 friends, no posts today → "No posts today" state | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |  | ✓ | ✓ | ✓ | ✓ |  |
+| FriendFeed.build F04 tap "Find friends" → friend search route opened | ✓ | ✓ | ✓ | ✓ |  |  |  |  |  |  |  |  | ✓ |  |  |  |  |  |
+| FriendFeed.build F05 friends, posts not loaded yet → loader, no empty-feed message | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |  |  |  |  |  |  | ✓ | ✓ |  |  |  |
+| FriendFeed.build F06 posts arrive after loading → loader replaced by the post | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+| FriendFeed.build F07 posts stream fails → loader stays, no error or empty message | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |  |  |  |  |  |  | ✓ | ✓ |  |  |  |
+| feed integration I01 posts in the database → real feed shows only the friend's post of today | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+

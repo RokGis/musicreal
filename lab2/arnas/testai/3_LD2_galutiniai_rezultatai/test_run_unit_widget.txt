@@ -1,0 +1,22 @@
+00:00 +0: loading /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart
+00:00 +0: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q01 friend posted today → post returned
+00:00 +1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q02 several friends posted today → all returned, newest first
+00:00 +2: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q03 post at 00:00:00 today → included, 23:59:59 yesterday → excluded
+00:00 +3: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q04 now at 23:59:59 → early post of the same day still included
+00:00 +4: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q05 post dated after now (tomorrow) → included
+00:00 +5: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q06 non-friend posted today → post not returned
+00:00 +6: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q07 post without created_at → not returned
+00:00 +7: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q09 more than 30 friends → query fails with ArgumentError
+00:00 +8: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery with the real cloud_firestore query code (setUpAll)
+00:00 +8: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery with the real cloud_firestore query code Q08 empty friends list → no friend filter, every post of today returned
+00:00 +9: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery with the real cloud_firestore query code (tearDownAll)
+00:00 +9: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: (setUpAll)
+00:00 +9: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +10: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F02 friends with two posts → both shown in stream order with author and song
+00:01 +11: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F03 friends, no posts today → "No posts today" state
+00:01 +12: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F04 tap "Find friends" → friend search route opened
+00:01 +13: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F05 friends, posts not loaded yet → loader, no empty-feed message
+00:01 +14: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F06 posts arrive after loading → loader replaced by the post
+00:01 +15: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F07 posts stream fails → loader stays, no error or empty message
+00:01 +16: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: (tearDownAll)
+00:02 +16: All tests passed!
