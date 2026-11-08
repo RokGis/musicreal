@@ -1,0 +1,10 @@
+{
+  "id": "M1",
+  "scenario": "30_draugu",
+  "summary": "parodyta įrašų 30/30 (100 %); klaida: nėra",
+  "friends": 30,
+  "postsExpected": 30,
+  "postsShown": 30,
+  "errorWidget": 0,
+  "errors": []
+}

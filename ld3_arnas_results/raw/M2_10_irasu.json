@@ -1,0 +1,50 @@
+{
+  "id": "M2",
+  "scenario": "10_irasu",
+  "summary": "atidarant: prenumeratų 21 (įrašai 1 + autoriai 10 + dainos 10), grotuvų atidaryta 10, kortelių sukurta 10, ekrane 5; naujas įrašas: naujų prenumeratų 32, nutrauktų 30, grotuvo kreipinių 22 {open: 11, loopSingleAudio: 11}, kadrų su neatitinkančiu autoriumi 1; tėvinio valdiklio perkūrimas: naujų prenumeratų 56, nutrauktų 56",
+  "friends": 10,
+  "posts": 10,
+  "load": {
+    "streams": {
+      "posts": {
+        "listens": 1,
+        "cancels": 0,
+        "active": 1
+      },
+      "authors": {
+        "listens": 10,
+        "cancels": 0,
+        "active": 10
+      },
+      "music": {
+        "listens": 10,
+        "cancels": 0,
+        "active": 10
+      },
+      "listens": 21,
+      "cancels": 0,
+      "active": 21
+    },
+    "audioCalls": {
+      "open": 10,
+      "loopSingleAudio": 10
+    },
+    "cardsBuilt": 10,
+    "cardsOnScreen": 5
+  },
+  "newPost": {
+    "newSubscriptions": 32,
+    "cancelledSubscriptions": 30,
+    "audioCalls": {
+      "open": 11,
+      "loopSingleAudio": 11
+    },
+    "framesWithMismatchedAuthor": 1,
+    "activeAfter": 23
+  },
+  "parentRebuild": {
+    "newSubscriptions": 56,
+    "cancelledSubscriptions": 56,
+    "audioCalls": {}
+  }
+}

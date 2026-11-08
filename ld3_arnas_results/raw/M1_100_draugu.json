@@ -1,0 +1,12 @@
+{
+  "id": "M1",
+  "scenario": "100_draugu",
+  "summary": "parodyta įrašų 0/100 (0 %); klaida: AssertionError (cloud_firestore/src/query.dart): 'in' filters support a maximum of 30 elements in the value [Iterable].",
+  "friends": 100,
+  "postsExpected": 100,
+  "postsShown": 0,
+  "errorWidget": 1,
+  "errors": [
+    "'package:cloud_firestore/src/query.dart': Failed assertion: line 729 pos 11: '(operator != 'in' && operator != 'array-contains-any') ||"
+  ]
+}

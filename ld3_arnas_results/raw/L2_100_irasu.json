@@ -1,0 +1,104 @@
+{
+  "id": "L2",
+  "scenario": "100_irasu",
+  "summary": "iki parodytos naujos kortelės 457,1 ms (420,4–546,4); kadrų 4; ilgiausias kadras 171,0 ms (165,4–240,3); kadrų su neatitinkančiu autoriumi 1",
+  "friends": 30,
+  "posts": 100,
+  "medianTotalMs": 457.09,
+  "medianMaxFrameMs": 171.05,
+  "runs": [
+    {
+      "totalMs": 461.84,
+      "frames": 4,
+      "maxFrameMs": 165.4,
+      "frameMs": [
+        165.4,
+        163.44,
+        114.82,
+        18.17
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 546.37,
+      "frames": 4,
+      "maxFrameMs": 234.66,
+      "frameMs": [
+        166.25,
+        234.66,
+        135.82,
+        9.65
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 544.24,
+      "frames": 4,
+      "maxFrameMs": 240.27,
+      "frameMs": [
+        163.15,
+        240.27,
+        122.94,
+        17.88
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 420.36,
+      "frames": 4,
+      "maxFrameMs": 165.38,
+      "frameMs": [
+        157.72,
+        165.38,
+        81.01,
+        16.25
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 429.62,
+      "frames": 4,
+      "maxFrameMs": 171.05,
+      "frameMs": [
+        171.05,
+        163.08,
+        85.91,
+        9.58
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 442.21,
+      "frames": 4,
+      "maxFrameMs": 168.63,
+      "frameMs": [
+        165.42,
+        168.63,
+        97.82,
+        10.34
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 457.09,
+      "frames": 4,
+      "maxFrameMs": 184.33,
+      "frameMs": [
+        184.33,
+        168.5,
+        91.45,
+        12.82
+      ],
+      "completed": true
+    }
+  ],
+  "framesWithMismatchedAuthor": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ]
+}

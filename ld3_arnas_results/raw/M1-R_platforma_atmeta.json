@@ -1,0 +1,9 @@
+{
+  "id": "M1-R",
+  "scenario": "platforma_atmeta",
+  "summary": "po 10 s: parodyta įrašų 0; įkėlimo indikatorius rodomas: taip; naudotojui rodomi tekstai: nėra; išimčių: 0",
+  "postsShown": 0,
+  "loaders": 1,
+  "visibleTexts": [],
+  "virtualSeconds": 10
+}

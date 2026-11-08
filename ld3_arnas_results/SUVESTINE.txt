@@ -1,0 +1,30 @@
+LD3 – Arnas: draugų srautas (FriendFeed), laiko elgsena ir mastelio kaita
+Kodas: d90e75a; Flutter 3.44.9, fake_cloud_firestore 3.0.2, cloud_firestore 5.6.9, assets_audio_player (git 243f953)
+Laikai – mediana (min–max) iš 7 paleidimų po 2 apšilimo, flutter_test debug (JIT).
+
+L1 | 1_irasu | iki pilno srauto 44,4 ms (38,1–49,0); kadrų 5; ilgiausias kadras 12,2 ms (10,5–13,0); kortelių ekrane 1 iš 1
+L1 | 10_irasu | iki pilno srauto 131,3 ms (115,8–150,6); kadrų 5; ilgiausias kadras 59,5 ms (52,8–66,0); kortelių ekrane 5 iš 10
+L1 | 30_irasu | iki pilno srauto 249,0 ms (203,1–336,8); kadrų 5; ilgiausias kadras 118,3 ms (91,3–194,7); kortelių ekrane 5 iš 30
+L1 | 100_irasu | iki pilno srauto 733,8 ms (609,5–816,1); kadrų 5; ilgiausias kadras 344,2 ms (263,9–471,5); kortelių ekrane 5 iš 100
+L1-M | 10_irasu_RTT_100ms | įrašų sąrašas 100 ms → autoriai 200 ms → grotuvai 305 ms (3,0 × RTT); užklausų 21
+L1-M | 30_irasu_RTT_100ms | įrašų sąrašas 100 ms → autoriai 200 ms → grotuvai 305 ms (3,0 × RTT); užklausų 61
+L1-M | 10_irasu_RTT_300ms | įrašų sąrašas 300 ms → autoriai 600 ms → grotuvai 905 ms (3,0 × RTT); užklausų 21
+L1-M | 30_irasu_RTT_300ms | įrašų sąrašas 300 ms → autoriai 600 ms → grotuvai 905 ms (3,0 × RTT); užklausų 61
+L2 | 1_irasu | iki parodytos naujos kortelės 22,9 ms (18,1–33,2); kadrų 4; ilgiausias kadras 7,2 ms (5,2–9,5); kadrų su neatitinkančiu autoriumi 0
+L2 | 10_irasu | iki parodytos naujos kortelės 75,2 ms (68,0–129,8); kadrų 4; ilgiausias kadras 29,1 ms (25,9–41,7); kadrų su neatitinkančiu autoriumi 1
+L2 | 30_irasu | iki parodytos naujos kortelės 157,4 ms (135,6–237,0); kadrų 4; ilgiausias kadras 62,4 ms (51,8–118,4); kadrų su neatitinkančiu autoriumi 1
+L2 | 100_irasu | iki parodytos naujos kortelės 457,1 ms (420,4–546,4); kadrų 4; ilgiausias kadras 171,0 ms (165,4–240,3); kadrų su neatitinkančiu autoriumi 1
+L1-DB | 10_irasu | iki pilno srauto 149,0 ms (141,2–252,6); kadrų 5; ilgiausias kadras 108,1 ms (99,1–185,4)
+L1-DB | 30_irasu | iki pilno srauto 489,6 ms (447,4–576,8); kadrų 5; ilgiausias kadras 326,4 ms (305,1–460,7)
+M1 | 30_draugu | parodyta įrašų 30/30 (100 %); klaida: nėra
+M1 | 31_draugu | parodyta įrašų 0/31 (0 %); klaida: AssertionError (cloud_firestore/src/query.dart): 'in' filters support a maximum of 30 elements in the value [Iterable].
+M1 | 100_draugu | parodyta įrašų 0/100 (0 %); klaida: AssertionError (cloud_firestore/src/query.dart): 'in' filters support a maximum of 30 elements in the value [Iterable].
+M1-R | platforma_atmeta | po 10 s: parodyta įrašų 0; įkėlimo indikatorius rodomas: taip; naudotojui rodomi tekstai: nėra; išimčių: 0
+M2 | 1_irasu | atidarant: prenumeratų 3 (įrašai 1 + autoriai 1 + dainos 1), grotuvų atidaryta 1, kortelių sukurta 1, ekrane 1; naujas įrašas: naujų prenumeratų 5, nutrauktų 3, grotuvo kreipinių 4 {open: 2, loopSingleAudio: 2}, kadrų su neatitinkančiu autoriumi 0; tėvinio valdiklio perkūrimas: naujų prenumeratų 11, nutrauktų 11
+M2 | 10_irasu | atidarant: prenumeratų 21 (įrašai 1 + autoriai 10 + dainos 10), grotuvų atidaryta 10, kortelių sukurta 10, ekrane 5; naujas įrašas: naujų prenumeratų 32, nutrauktų 30, grotuvo kreipinių 22 {open: 11, loopSingleAudio: 11}, kadrų su neatitinkančiu autoriumi 1; tėvinio valdiklio perkūrimas: naujų prenumeratų 56, nutrauktų 56
+M2 | 30_irasu | atidarant: prenumeratų 61 (įrašai 1 + autoriai 30 + dainos 30), grotuvų atidaryta 30, kortelių sukurta 30, ekrane 5; naujas įrašas: naujų prenumeratų 92, nutrauktų 90, grotuvo kreipinių 62 {open: 31, loopSingleAudio: 31}, kadrų su neatitinkančiu autoriumi 1; tėvinio valdiklio perkūrimas: naujų prenumeratų 156, nutrauktų 156
+M2 | 100_irasu | atidarant: prenumeratų 201 (įrašai 1 + autoriai 100 + dainos 100), grotuvų atidaryta 100, kortelių sukurta 100, ekrane 5; naujas įrašas: naujų prenumeratų 302, nutrauktų 300, grotuvo kreipinių 202 {open: 101, loopSingleAudio: 101}, kadrų su neatitinkančiu autoriumi 1; tėvinio valdiklio perkūrimas: naujų prenumeratų 506, nutrauktų 506
+
+time_behaviour: 00:39 +14: All tests passed!
+scalability: 00:21 +8: All tests passed!
+screens: 00:02 +2: All tests passed!

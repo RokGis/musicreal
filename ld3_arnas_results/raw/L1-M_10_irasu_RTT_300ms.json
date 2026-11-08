@@ -1,0 +1,12 @@
+{
+  "id": "L1-M",
+  "scenario": "10_irasu_RTT_300ms",
+  "summary": "įrašų sąrašas 300 ms → autoriai 600 ms → grotuvai 905 ms (3,0 × RTT); užklausų 21",
+  "posts": 10,
+  "rttMs": 300,
+  "stepMs": 5,
+  "tPostListMs": 300,
+  "tAuthorsMs": 600,
+  "tCompleteMs": 905,
+  "requests": 21
+}
