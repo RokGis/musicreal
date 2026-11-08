@@ -1,0 +1,21 @@
+00:00 +0: loading /home/arnas/Documents/GitHub/musicreal/test/ld3_arnas/scalability_test.dart
+00:00 +0: (setUpAll)
+00:00 +0: M1 didžiausias palaikomas draugų skaičius (produkcinis FeedSource) M1 30 draugų, kiekvienas paskelbė po įrašą
+RESULT | M1 | 30_draugu | parodyta įrašų 30/30 (100 %); klaida: nėra
+00:01 +1: M1 didžiausias palaikomas draugų skaičius (produkcinis FeedSource) M1 31 draugų, kiekvienas paskelbė po įrašą
+RESULT | M1 | 31_draugu | parodyta įrašų 0/31 (0 %); klaida: AssertionError (cloud_firestore/src/query.dart): 'in' filters support a maximum of 30 elements in the value [Iterable].
+00:01 +2: M1 didžiausias palaikomas draugų skaičius (produkcinis FeedSource) M1 100 draugų, kiekvienas paskelbė po įrašą
+RESULT | M1 | 100_draugu | parodyta įrašų 0/100 (0 %); klaida: AssertionError (cloud_firestore/src/query.dart): 'in' filters support a maximum of 30 elements in the value [Iterable].
+00:01 +3: M1 didžiausias palaikomas draugų skaičius (produkcinis FeedSource) M1-R release modelis: užklausą atmeta platforma (31 draugas)
+Error querying Instance of '_JsonQuery': [cloud_firestore/invalid-argument] modeled: platform rejected the feed query ('in' filter with more than 30 values)
+RESULT | M1-R | platforma_atmeta | po 10 s: parodyta įrašų 0; įkėlimo indikatorius rodomas: taip; naudotojui rodomi tekstai: nėra; išimčių: 0
+00:01 +4: M2 išteklių augimas su įrašų skaičiumi M2 1 įrašų (1 draugų)
+RESULT | M2 | 1_irasu | atidarant: prenumeratų 3 (įrašai 1 + autoriai 1 + dainos 1), grotuvų atidaryta 1, kortelių sukurta 1, ekrane 1; naujas įrašas: naujų prenumeratų 5, nutrauktų 3, grotuvo kreipinių 4 {open: 2, loopSingleAudio: 2}, kadrų su neatitinkančiu autoriumi 0; tėvinio valdiklio perkūrimas: naujų prenumeratų 11, nutrauktų 11
+00:02 +5: M2 išteklių augimas su įrašų skaičiumi M2 10 įrašų (10 draugų)
+RESULT | M2 | 10_irasu | atidarant: prenumeratų 21 (įrašai 1 + autoriai 10 + dainos 10), grotuvų atidaryta 10, kortelių sukurta 10, ekrane 5; naujas įrašas: naujų prenumeratų 32, nutrauktų 30, grotuvo kreipinių 22 {open: 11, loopSingleAudio: 11}, kadrų su neatitinkančiu autoriumi 1; tėvinio valdiklio perkūrimas: naujų prenumeratų 56, nutrauktų 56
+00:03 +6: M2 išteklių augimas su įrašų skaičiumi M2 30 įrašų (30 draugų)
+RESULT | M2 | 30_irasu | atidarant: prenumeratų 61 (įrašai 1 + autoriai 30 + dainos 30), grotuvų atidaryta 30, kortelių sukurta 30, ekrane 5; naujas įrašas: naujų prenumeratų 92, nutrauktų 90, grotuvo kreipinių 62 {open: 31, loopSingleAudio: 31}, kadrų su neatitinkančiu autoriumi 1; tėvinio valdiklio perkūrimas: naujų prenumeratų 156, nutrauktų 156
+00:07 +7: M2 išteklių augimas su įrašų skaičiumi M2 100 įrašų (30 draugų)
+RESULT | M2 | 100_irasu | atidarant: prenumeratų 201 (įrašai 1 + autoriai 100 + dainos 100), grotuvų atidaryta 100, kortelių sukurta 100, ekrane 5; naujas įrašas: naujų prenumeratų 302, nutrauktų 300, grotuvo kreipinių 202 {open: 101, loopSingleAudio: 101}, kadrų su neatitinkančiu autoriumi 1; tėvinio valdiklio perkūrimas: naujų prenumeratų 506, nutrauktų 506
+00:21 +8: (tearDownAll)
+00:21 +8: All tests passed!

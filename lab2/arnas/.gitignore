@@ -1,0 +1,4 @@
+results/
+private/
+*.zip
+tools/coverage_map/.dart_tool/

@@ -1,0 +1,62 @@
+00:00 +0: loading /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart
+00:00 +0: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: (setUpAll)
+00:00 +0: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +2: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +3: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +4: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +5: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +6: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +7: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +7 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +7 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q08 empty friends list → no posts returned [E]
+  Unsupported
+  package:fake_cloud_firestore/src/mock_query.dart 409:5   MockQuery._valueMatchesQuery
+  package:fake_cloud_firestore/src/mock_query.dart 275:18  MockQuery.where.<fn>.<fn>
+  dart:core                                                Iterable.toList
+  package:fake_cloud_firestore/src/mock_query.dart 287:12  MockQuery.where.<fn>
+  package:fake_cloud_firestore/src/mock_query.dart 47:29   MockQuery.get
+  
+00:00 +8 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F01 no friends → empty-feed state with "Find friends", posts not requested
+00:00 +9 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: feed integration I01 posts in the database → real feed shows only the friend's post of today
+00:00 +10 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: feed integration I01 posts in the database → real feed shows only the friend's post of today
+00:00 +11 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: feed integration I01 posts in the database → real feed shows only the friend's post of today
+00:01 +12 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: feed integration I01 posts in the database → real feed shows only the friend's post of today
+00:01 +13 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: feed integration I01 posts in the database → real feed shows only the friend's post of today
+00:01 +13 -1: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F06 posts arrive after loading → loader replaced by the post
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: no matching candidates
+  Actual: _TypeWidgetFinder:<Found 1 widget with type "CircularProgressIndicator": [
+            CircularProgressIndicator(<indeterminate>, state:
+_CircularProgressIndicatorState#39dcc(ticker active)),
+          ]>
+   Which: means one was found but none were expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart:184:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart line 184
+The test description was:
+  F06 posts arrive after loading → loader replaced by the post
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +13 -2: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: feed integration I01 posts in the database → real feed shows only the friend's post of today
+00:01 +13 -2: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F06 posts arrive after loading → loader replaced by the post [E]
+  Test failed. See exception logs above.
+  The test description was: F06 posts arrive after loading → loader replaced by the post
+  
+00:01 +14 -2: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: feed integration I01 posts in the database → real feed shows only the friend's post of today
+00:01 +15 -2: /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/feed_integration_test.dart: (tearDownAll)
+00:01 +15 -2: Some tests failed.
+
+Failing tests:
+  /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friend_feed_build_test.dart: FriendFeed.build F06 posts arrive after loading → loader replaced by the post
+  /home/arnas/Documents/GitHub/musicreal/test/ld2_arnas/friends_feed_query_test.dart: friendsFeedQuery Q08 empty friends list → no posts returned

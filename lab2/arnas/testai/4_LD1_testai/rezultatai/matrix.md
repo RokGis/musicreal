@@ -1,0 +1,58 @@
+# Padengimo matrica: test/tests/feed_query_test.dart, test/tests/feed_widget_test.dart
+
+Kiekvienas testas paleistas atskirai (`--plain-name`). ✓ – sakinys įvykdytas arba sprendimo baigtis pasiekta.
+
+## friendsFeedQuery
+
+| Testas | S1 |
+|---|---|
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-02 — confirmed friend's post of today is in the feed | ✓ |
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-03 — confirmed friend's post from yesterday is not in the feed | ✓ |
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-03 (BVA) — 00:00:00 today is in, 23:59:59 yesterday is out | ✓ |
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-07 — one post appears exactly once, on every refresh | ✓ |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-13 — a non-friend's post of today is not in the feed | ✓ |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-01 — pending request: post of today is not in the feed | ✓ |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-04 — request sent by me, still pending: not in the feed | ✓ |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-04 — declined request: not in the feed | ✓ |
+| SCRUM-49 AC3/AC4 — friendship changes apply on the next refresh SCRUM-49 / TC-FEAT49-05 — accepted request: new friend's post of today appears | ✓ |
+| SCRUM-49 AC3/AC4 — friendship changes apply on the next refresh SCRUM-49 / TC-FEAT49-06 — removed friend: their posts disappear | ✓ |
+| SCRUM-49 error-based — unusual data SCRUM-49 / TC-FEAT49-13 — a post without created_at is not shown as a post of today | ✓ |
+| SCRUM-49 error-based — unusual data SCRUM-49 / TC-FEAT49-13 — friends with several posts today: all of them, none twice | ✓ |
+| SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-01 — no friends: an empty-feed message is shown |  |
+| SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-02 — friends, no posts today: the SAME message as with no friends |  |
+| SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-49 / TC-FEAT49-09 — both empty cases show the same empty-feed message |  |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-03 — a friend posted today: the post is shown with name, song and emotion |  |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-04 — every post shows the emotion its author picked |  |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-05 — every post shows its author's account name |  |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-49 / TC-FEAT49-08 — a post shows author name, song name and emotion |  |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-49 / TC-FEAT49-07 — refreshing does not duplicate a post |  |
+| SCRUM-49 AC7 — data loading failure SCRUM-49 / TC-FEAT49-10 — loading failure: error message with a retry action, not the empty message |  |
+| SCRUM-67 / SCRUM-49 error-based — incomplete posts SCRUM-49 / TC-FEAT49-13 — a post without an emotion still renders, with a placeholder |  |
+
+## FriendFeed.build
+
+| Testas | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 | S10 | S11 | S12 | D1T | D1F | D2T | D2F | D3T | D3F |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-02 — confirmed friend's post of today is in the feed |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-03 — confirmed friend's post from yesterday is not in the feed |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-03 (BVA) — 00:00:00 today is in, 23:59:59 yesterday is out |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC1 — confirmed friends' posts of today SCRUM-49 / TC-FEAT49-07 — one post appears exactly once, on every refresh |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-13 — a non-friend's post of today is not in the feed |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-01 — pending request: post of today is not in the feed |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-04 — request sent by me, still pending: not in the feed |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC2 — no confirmed friendship, no posts SCRUM-49 / TC-FEAT49-04 — declined request: not in the feed |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC3/AC4 — friendship changes apply on the next refresh SCRUM-49 / TC-FEAT49-05 — accepted request: new friend's post of today appears |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 AC3/AC4 — friendship changes apply on the next refresh SCRUM-49 / TC-FEAT49-06 — removed friend: their posts disappear |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 error-based — unusual data SCRUM-49 / TC-FEAT49-13 — a post without created_at is not shown as a post of today |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-49 error-based — unusual data SCRUM-49 / TC-FEAT49-13 — friends with several posts today: all of them, none twice |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-01 — no friends: an empty-feed message is shown | ✓ | ✓ | ✓ |  |  |  |  |  |  |  |  |  | ✓ |  |  |  |  |  |
+| SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-67 / TC-US67-02 — friends, no posts today: the SAME message as with no friends | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| SCRUM-67 AC2 / SCRUM-49 AC6 — empty feed SCRUM-49 / TC-FEAT49-09 — both empty cases show the same empty-feed message | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-03 — a friend posted today: the post is shown with name, song and emotion | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-04 — every post shows the emotion its author picked | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-67 / TC-US67-05 — every post shows its author's account name | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-49 / TC-FEAT49-08 — a post shows author name, song name and emotion | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+| SCRUM-67 AC1/AC3/AC4 / SCRUM-49 AC5 — post contents SCRUM-49 / TC-FEAT49-07 — refreshing does not duplicate a post | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+| SCRUM-49 AC7 — data loading failure SCRUM-49 / TC-FEAT49-10 — loading failure: error message with a retry action, not the empty message | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |  |  |  |  |  |  | ✓ | ✓ |  |  |  |
+| SCRUM-67 / SCRUM-49 error-based — incomplete posts SCRUM-49 / TC-FEAT49-13 — a post without an emotion still renders, with a placeholder | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |
+

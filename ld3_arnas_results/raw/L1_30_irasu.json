@@ -1,0 +1,102 @@
+{
+  "id": "L1",
+  "scenario": "30_irasu",
+  "summary": "iki pilno srauto 249,0 ms (203,1–336,8); kadrų 5; ilgiausias kadras 118,3 ms (91,3–194,7); kortelių ekrane 5 iš 30",
+  "friends": 30,
+  "posts": 30,
+  "medianTotalMs": 248.98,
+  "medianMaxFrameMs": 118.34,
+  "runs": [
+    {
+      "totalMs": 336.79,
+      "frames": 5,
+      "maxFrameMs": 194.73,
+      "frameMs": [
+        6.65,
+        16.87,
+        67.19,
+        51.35,
+        194.73
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 295.86,
+      "frames": 5,
+      "maxFrameMs": 132.9,
+      "frameMs": [
+        10.76,
+        18.33,
+        79.05,
+        54.82,
+        132.9
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 249.37,
+      "frames": 5,
+      "maxFrameMs": 118.34,
+      "frameMs": [
+        7.84,
+        23.46,
+        53.81,
+        45.93,
+        118.34
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 232.46,
+      "frames": 5,
+      "maxFrameMs": 107.51,
+      "frameMs": [
+        7.14,
+        16.91,
+        56.3,
+        44.61,
+        107.51
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 217.98,
+      "frames": 5,
+      "maxFrameMs": 92.27,
+      "frameMs": [
+        6.81,
+        14.89,
+        54.89,
+        49.12,
+        92.27
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 248.98,
+      "frames": 5,
+      "maxFrameMs": 136.43,
+      "frameMs": [
+        5.46,
+        14.21,
+        51.56,
+        41.32,
+        136.43
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 203.12,
+      "frames": 5,
+      "maxFrameMs": 91.27,
+      "frameMs": [
+        5.38,
+        13.83,
+        50.91,
+        41.74,
+        91.27
+      ],
+      "completed": true
+    }
+  ]
+}

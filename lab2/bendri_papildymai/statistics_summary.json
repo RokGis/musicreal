@@ -1,0 +1,107 @@
+{
+  "run": "additional statistics check, 2026-10-26",
+  "tests": "3 PASS; separate from original Rokas tests",
+  "functions": {
+    "_topSongs": {
+      "statements": [
+        20,
+        20
+      ],
+      "decisions": [
+        8,
+        8
+      ],
+      "lines": [
+        18,
+        18
+      ],
+      "vm_branches": [
+        9,
+        9
+      ],
+      "line_range": [
+        83,
+        112
+      ]
+    },
+    "_emotionTotals": {
+      "statements": [
+        7,
+        7
+      ],
+      "decisions": [
+        4,
+        4
+      ],
+      "lines": [
+        8,
+        8
+      ],
+      "vm_branches": [
+        4,
+        4
+      ],
+      "line_range": [
+        114,
+        123
+      ]
+    }
+  },
+  "counts": {
+    "statements": {
+      "_topSongs:statement:84:5": 3,
+      "_topSongs:statement:85:5": 3,
+      "_topSongs:statement:87:5": 3,
+      "_topSongs:statement:97:5": 3,
+      "_topSongs:statement:100:5": 3,
+      "_emotionTotals:statement:115:5": 3,
+      "_emotionTotals:statement:116:5": 3,
+      "_emotionTotals:statement:120:5": 3,
+      "_emotionTotals:statement:122:5": 3,
+      "_topSongs:statement:88:7": 17,
+      "_topSongs:statement:89:7": 17,
+      "_topSongs:statement:90:7": 16,
+      "_topSongs:statement:91:7": 16,
+      "_topSongs:statement:92:9": 3,
+      "_topSongs:statement:93:9": 3,
+      "_topSongs:statement:89:25": 1,
+      "_topSongs:statement:101:7": 12,
+      "_topSongs:statement:102:7": 12,
+      "_topSongs:statement:103:7": 12,
+      "_topSongs:statement:104:7": 12,
+      "_topSongs:statement:105:9": 2,
+      "_topSongs:statement:106:11": 1,
+      "_topSongs:statement:107:11": 1,
+      "_topSongs:statement:110:7": 12,
+      "_emotionTotals:statement:117:7": 17,
+      "_emotionTotals:statement:118:7": 4,
+      "_emotionTotals:statement:117:31": 13
+    },
+    "decisions": {
+      "_topSongs:loop-decision:87:24": {
+        "true": 17,
+        "false": 3
+      },
+      "_emotionTotals:loop-decision:116:24": {
+        "true": 17,
+        "false": 3
+      },
+      "_topSongs:decision:89:11": {
+        "true": 1,
+        "false": 16
+      },
+      "_topSongs:decision:91:11": {
+        "true": 3,
+        "false": 13
+      },
+      "_topSongs:decision:105:13": {
+        "true": 1,
+        "false": 1
+      },
+      "_emotionTotals:decision:117:11": {
+        "true": 13,
+        "false": 4
+      }
+    }
+  }
+}

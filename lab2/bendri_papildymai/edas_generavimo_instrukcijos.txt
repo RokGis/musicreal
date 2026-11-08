@@ -1,0 +1,7 @@
+Asistentas: Codex šiame pokalbyje. Data: 2026-10-26.
+Tikslus modelio identifikatorius neišsaugotas.
+Generuota tęstinėje sesijoje. Tai instrukcijų santrauka, ne pažodinis atskiros vienkartinės užklausos tekstas.
+
+Užduotis: parengti googleSignInFunc ir FirebaseAuthManager._signInOrCreateAccount testus pagal pasirinktas funkcijas bei SCRUM-30 / SCRUM-33.
+Taisyklės: tikras programos kodas, išorines priklausomybes keisti platformos pakaitalais; nerašyti į tikrą Firebase; privatų metodą tikrinti per viešą wrapperį; nekeisti lib ir esamų testų; atskirti esamą išimties perdavimą nuo AC6 pažeidimo; išsaugoti pirmą variantą ir tikrus žurnalus.
+Išvestis: Flutter testų Dart failai, scenarijų ID, pagalbininkai, matavimai, originalios ataskaitos, Confluence dokumentacija ir ZIP.

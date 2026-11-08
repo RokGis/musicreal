@@ -1,0 +1,266 @@
+[
+  {
+    "id": "_topSongs:statement:84:5",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 84,
+    "column": 5,
+    "source": "final counts = <String, int>{};"
+  },
+  {
+    "id": "_topSongs:statement:85:5",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 85,
+    "column": 5,
+    "source": "final emojiPerSong = <String, Map<String, int>>{};"
+  },
+  {
+    "id": "_topSongs:statement:87:5",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 87,
+    "column": 5,
+    "source": "for (final post in posts) {final song = post.songName; if (song.isEmpty) continue; counts[song] = (counts[song] ?? 0) + 1; if (post.emoji.isNotEmpty) {final forSong = emojiPerSong.putIfAbsent(song, () => <String, int>{}); forSong[post.emoji] = (forSong[post.emoji] ?? 0) + 1;}}"
+  },
+  {
+    "id": "_topSongs:statement:97:5",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 97,
+    "column": 5,
+    "source": "final ranked = counts.entries.toList()..sort((a, b) => b.value.compareTo(a.value));"
+  },
+  {
+    "id": "_topSongs:statement:100:5",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 100,
+    "column": 5,
+    "source": "return ranked.take(10).map((entry) {final emojis = emojiPerSong[entry.key]; var topEmoji = ''; var best = 0; emojis?.forEach((emoji, count) {if (count > best) {best = count; topEmoji = emoji;}}); return SongStat(entry.key, entry.value, topEmoji);}).toList();"
+  },
+  {
+    "id": "_topSongs:loop-decision:87:24",
+    "method": "_topSongs",
+    "kind": "loop-decision",
+    "line": 87,
+    "column": 24,
+    "source": "posts"
+  },
+  {
+    "id": "_topSongs:statement:88:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 88,
+    "column": 7,
+    "source": "final song = post.songName;"
+  },
+  {
+    "id": "_topSongs:statement:89:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 89,
+    "column": 7,
+    "source": "if (song.isEmpty) continue;"
+  },
+  {
+    "id": "_topSongs:statement:90:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 90,
+    "column": 7,
+    "source": "counts[song] = (counts[song] ?? 0) + 1;"
+  },
+  {
+    "id": "_topSongs:statement:91:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 91,
+    "column": 7,
+    "source": "if (post.emoji.isNotEmpty) {final forSong = emojiPerSong.putIfAbsent(song, () => <String, int>{}); forSong[post.emoji] = (forSong[post.emoji] ?? 0) + 1;}"
+  },
+  {
+    "id": "_topSongs:decision:89:11",
+    "method": "_topSongs",
+    "kind": "decision",
+    "line": 89,
+    "column": 11,
+    "source": "song.isEmpty"
+  },
+  {
+    "id": "_topSongs:statement:89:25",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 89,
+    "column": 25,
+    "source": "continue;"
+  },
+  {
+    "id": "_topSongs:decision:91:11",
+    "method": "_topSongs",
+    "kind": "decision",
+    "line": 91,
+    "column": 11,
+    "source": "post.emoji.isNotEmpty"
+  },
+  {
+    "id": "_topSongs:statement:92:9",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 92,
+    "column": 9,
+    "source": "final forSong = emojiPerSong.putIfAbsent(song, () => <String, int>{});"
+  },
+  {
+    "id": "_topSongs:statement:93:9",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 93,
+    "column": 9,
+    "source": "forSong[post.emoji] = (forSong[post.emoji] ?? 0) + 1;"
+  },
+  {
+    "id": "_topSongs:statement:101:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 101,
+    "column": 7,
+    "source": "final emojis = emojiPerSong[entry.key];"
+  },
+  {
+    "id": "_topSongs:statement:102:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 102,
+    "column": 7,
+    "source": "var topEmoji = '';"
+  },
+  {
+    "id": "_topSongs:statement:103:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 103,
+    "column": 7,
+    "source": "var best = 0;"
+  },
+  {
+    "id": "_topSongs:statement:104:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 104,
+    "column": 7,
+    "source": "emojis?.forEach((emoji, count) {if (count > best) {best = count; topEmoji = emoji;}});"
+  },
+  {
+    "id": "_topSongs:statement:110:7",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 110,
+    "column": 7,
+    "source": "return SongStat(entry.key, entry.value, topEmoji);"
+  },
+  {
+    "id": "_topSongs:statement:105:9",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 105,
+    "column": 9,
+    "source": "if (count > best) {best = count; topEmoji = emoji;}"
+  },
+  {
+    "id": "_topSongs:decision:105:13",
+    "method": "_topSongs",
+    "kind": "decision",
+    "line": 105,
+    "column": 13,
+    "source": "count > best"
+  },
+  {
+    "id": "_topSongs:statement:106:11",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 106,
+    "column": 11,
+    "source": "best = count;"
+  },
+  {
+    "id": "_topSongs:statement:107:11",
+    "method": "_topSongs",
+    "kind": "statement",
+    "line": 107,
+    "column": 11,
+    "source": "topEmoji = emoji;"
+  },
+  {
+    "id": "_emotionTotals:statement:115:5",
+    "method": "_emotionTotals",
+    "kind": "statement",
+    "line": 115,
+    "column": 5,
+    "source": "final counts = <String, int>{};"
+  },
+  {
+    "id": "_emotionTotals:statement:116:5",
+    "method": "_emotionTotals",
+    "kind": "statement",
+    "line": 116,
+    "column": 5,
+    "source": "for (final post in posts) {if (post.emoji.isEmpty) continue; counts[post.emoji] = (counts[post.emoji] ?? 0) + 1;}"
+  },
+  {
+    "id": "_emotionTotals:statement:120:5",
+    "method": "_emotionTotals",
+    "kind": "statement",
+    "line": 120,
+    "column": 5,
+    "source": "final sorted = counts.entries.toList()..sort((a, b) => b.value.compareTo(a.value));"
+  },
+  {
+    "id": "_emotionTotals:statement:122:5",
+    "method": "_emotionTotals",
+    "kind": "statement",
+    "line": 122,
+    "column": 5,
+    "source": "return Map.fromEntries(sorted);"
+  },
+  {
+    "id": "_emotionTotals:loop-decision:116:24",
+    "method": "_emotionTotals",
+    "kind": "loop-decision",
+    "line": 116,
+    "column": 24,
+    "source": "posts"
+  },
+  {
+    "id": "_emotionTotals:statement:117:7",
+    "method": "_emotionTotals",
+    "kind": "statement",
+    "line": 117,
+    "column": 7,
+    "source": "if (post.emoji.isEmpty) continue;"
+  },
+  {
+    "id": "_emotionTotals:statement:118:7",
+    "method": "_emotionTotals",
+    "kind": "statement",
+    "line": 118,
+    "column": 7,
+    "source": "counts[post.emoji] = (counts[post.emoji] ?? 0) + 1;"
+  },
+  {
+    "id": "_emotionTotals:decision:117:11",
+    "method": "_emotionTotals",
+    "kind": "decision",
+    "line": 117,
+    "column": 11,
+    "source": "post.emoji.isEmpty"
+  },
+  {
+    "id": "_emotionTotals:statement:117:31",
+    "method": "_emotionTotals",
+    "kind": "statement",
+    "line": 117,
+    "column": 31,
+    "source": "continue;"
+  }
+]

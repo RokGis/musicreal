@@ -1,0 +1,76 @@
+{
+  "id": "L1-DB",
+  "scenario": "10_irasu",
+  "summary": "iki pilno srauto 149,0 ms (141,2–252,6); kadrų 5; ilgiausias kadras 108,1 ms (99,1–185,4)",
+  "friends": 10,
+  "posts": 10,
+  "medianTotalMs": 148.99,
+  "medianMaxFrameMs": 108.13,
+  "runs": [
+    {
+      "totalMs": 143.6,
+      "frames": 5,
+      "maxFrameMs": 99.43,
+      "frameMs": [
+        9.51,
+        5.48,
+        99.43,
+        12.3,
+        16.89
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 141.17,
+      "frames": 5,
+      "maxFrameMs": 99.13,
+      "frameMs": [
+        6.12,
+        5.72,
+        99.13,
+        10.15,
+        20.06
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 148.99,
+      "frames": 5,
+      "maxFrameMs": 108.13,
+      "frameMs": [
+        5.63,
+        5.83,
+        108.13,
+        12.67,
+        16.74
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 252.6,
+      "frames": 5,
+      "maxFrameMs": 185.41,
+      "frameMs": [
+        9.94,
+        11.81,
+        185.41,
+        15.45,
+        30.0
+      ],
+      "completed": true
+    },
+    {
+      "totalMs": 168.55,
+      "frames": 5,
+      "maxFrameMs": 121.95,
+      "frameMs": [
+        5.8,
+        10.13,
+        121.95,
+        13.21,
+        17.46
+      ],
+      "completed": true
+    }
+  ]
+}

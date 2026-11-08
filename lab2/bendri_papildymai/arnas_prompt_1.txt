@@ -1,0 +1,87 @@
+## Užduotis (Task)
+
+Esi Dart ir Flutter testų inžinierius. Parašyk vienetų testus (unit tests)
+aukščiausio lygio funkcijai `friendsFeedQuery()` iš failo
+`lib/pages/home/home_widget.dart`.
+
+Prieš rašydamas testus perskaityk:
+- `friendsFeedQuery()` faile `lib/pages/home/home_widget.dart`;
+- `startOfDay()` faile `lib/flutter_flow/custom_functions.dart`;
+- įrašo laukų pavadinimus faile `lib/backend/schema/user_post_record.dart`;
+- duomenų paruošimo pagalbininkus faile `test/tests/helpers.dart`.
+
+Funkcija gauna Firestore užklausą, draugų dokumentų nuorodų sąrašą ir
+dabartinį laiką. Ji grąžina užklausą, kuri turi atrinkti draugų šiandienos
+įrašus ir surikiuoti juos nuo naujausio. Testuose užklausą vykdyk su
+`fake_cloud_firestore` duomenų baze ir tikrink, kuriuos įrašus ir kokia
+tvarka ji grąžina.
+
+## Taisyklės (Rules)
+
+1. Nekeisk failų kataloge `lib/`, `pubspec.yaml` ir esamų testų
+   (`test/tests/`, `test/mantas/`, `test/widget_test.dart`). Sukurk tik vieną
+   naują failą, nurodytą išvesties formate.
+2. Gali naudoti duomenų paruošimo pagalbininkus iš `test/tests/helpers.dart`
+   (pvz., `addUser`, `addPost`, `userRef`, `paths`, `kNow`). Nekopijuok LD1
+   testų iš `test/tests/` ir neperrašyk tikrinamos funkcijos logikos teste.
+3. Naudok tik jau įdiegtus paketus: `flutter_test`, `fake_cloud_firestore` ir
+   `package:project_for_management/...`. Naujų priklausomybių nepridėk.
+   Nenaudok tikro Firebase, tinklo ir `Firebase.initializeApp()`.
+4. Testai turi būti deterministiniai. Naudok fiksuotą laiką, pvz.,
+   `DateTime(2026, 10, 3, 12)`. Nenaudok `DateTime.now()` ir
+   `getCurrentTimestamp`.
+5. Kiekvienas testas turi būti nepriklausomas: nauja `FakeFirebaseFirestore`
+   kiekvienam testui (`setUp`), jokios bendros keičiamos būsenos, testai
+   nepriklauso nuo vykdymo eilės.
+6. Vienas testas tikrina vieną elgesį. Testo pavadinimas – angliškai, formatu
+   `<ID> <sąlyga> → <laukiamas rezultatas>`, pvz.
+   `Q03 post at 00:00:00 today → included`.
+7. Kiekvienas `expect` tikrina konkretų rezultatą: grąžintų dokumentų ID ir jų
+   tvarką. Netikrink vien to, kad rezultatas nėra `null` ar tuščias. Kur
+   naudinga, pridėk `reason:`.
+8. Venk perteklinių testų. Kiekvieną žemiau nurodytą situaciją tikrink vieną
+   kartą. Nerašyk kelių testų, kurie tikrina tą pačią lygiavertiškumo klasę
+   ir skiriasi tik reikšmėmis. Netikrink Firestore ar `fake_cloud_firestore`
+   elgesio, kuris nepriklauso nuo `friendsFeedQuery()`.
+9. Jei situacijos elgesys priklauso nuo tikros Firestore paslaugos ir
+   `fake_cloud_firestore` jo neatkartoja, testo nerašyk. Įrašyk situaciją į
+   sąrašą „Netestuota“ ir nurodyk priežastį.
+10. Faktinį elgesį nustatyk iš kodo. Jei jis atrodo neteisingas, testas vis
+    tiek turi tikrinti faktinį elgesį, o komentare nurodyk galimą defektą.
+11. Parašęs failą, testų nevykdyk ir failo nebetaisyk. Kompiliavimas ir
+    vykdymas bus atliekami atskirai, o vertinamas bus pradinis variantas.
+
+## Tikrintinos situacijos
+
+Normalus veikimas:
+- N1. Draugo šiandienos įrašas grąžinamas.
+- N2. Keli draugai ir keli šiandienos įrašai: grąžinami visi, nuo naujausio
+  iki seniausio.
+
+Kraštinės reikšmės:
+- B1. Įrašas sukurtas lygiai šiandien 00:00:00 – grąžinamas; vakar 23:59:59 –
+  negrąžinamas.
+- B2. `now` yra dienos pabaigoje (23:59:59): ankstyvas tos dienos įrašas vis
+  tiek grąžinamas.
+- B3. Įrašo `created_at` vėlesnis už `now` (pvz., rytoj): iš kodo nustatyk,
+  ar jis grąžinamas, ir tai užfiksuok testu.
+
+Klaidingi ir neįprasti duomenys:
+- X1. Ne draugo šiandienos įrašas negrąžinamas.
+- X2. Įrašas be `created_at` lauko negrąžinamas.
+- X3. Tuščias draugų sąrašas: užfiksuok faktinį elgesį su
+  `fake_cloud_firestore`; komentare nurodyk, kaip elgtųsi tikras Firestore.
+- X4. Daugiau nei 30 draugų (Firestore `whereIn` riba): jei
+  `fake_cloud_firestore` šios ribos neužtikrina, netestuok ir įrašyk į
+  „Netestuota“.
+
+## Išvesties formatas (Output format)
+
+1. Vienas failas: `test/ld2_arnas/friends_feed_query_test.dart`.
+2. Pirma failo eilutė: `// LD2 8 užduotis – Arnas: friendsFeedQuery() testai.`
+3. Struktūra: `void main()` → `group('friendsFeedQuery', ...)` → testai
+   `Q01`, `Q02`, ...
+4. Sukūręs failą, atsakyme pateik tik:
+   - lentelę `ID | Situacija (N1…X4) | Testo pavadinimas | Ką tikrina expect`;
+   - sąrašą „Netestuota“ su priežastimis;
+   - komandą testams paleisti.

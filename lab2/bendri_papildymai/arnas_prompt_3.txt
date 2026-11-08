@@ -1,0 +1,45 @@
+## Užduotis (Task)
+
+Parašyk vieną komponentų integracinį testą draugų srautui. Testas turi
+patikrinti, kad tikras `FriendFeed` su numatytuoju `FeedSource` (be fake
+poklasio) parodo tik draugų šiandienos įrašus, kai duomenys yra atminties
+Firestore pakaitale.
+
+Prieš rašydamas perskaityk:
+- `FeedSource`, `FriendFeed` ir `friendsFeedQuery()` faile
+  `lib/pages/home/home_widget.dart`;
+- `queryUserPostRecord()` faile `lib/backend/backend.dart`;
+- `currentUserDocument` faile `lib/auth/firebase_auth/auth_util.dart`;
+- esamą testų aplinką `test/mantas/support/test_env.dart` ir
+  `test/mantas/support/fake_firestore.dart`.
+
+## Taisyklės (Rules)
+
+1. Nekeisk failų kataloge `lib/`, `pubspec.yaml` ir esamų testų. Sukurk tik
+   vieną naują failą.
+2. Naudok esamą Manto testų aplinką: `setUpMusicRealTestEnv()` (`setUpAll`),
+   `resetMusicRealTestEnv()` (`setUp`), `fakeFirestore.seed(...)`, `settle()`.
+   Firestore platformos sluoksnis turi būti pakaitalas; tikro Firebase ir
+   tinklo nenaudok.
+3. Prisijungusį naudotoją nustatyk per `currentUserDocument`, nes
+   `FeedSource.friends()` skaito būtent jį.
+4. `FeedSource.todaysPosts()` naudoja tikrą laikrodį (`getCurrentTimestamp`),
+   todėl įrašų laikus skaičiuok nuo dabartinės dienos pradžios. Komentare
+   nurodyk vidurnakčio ribą kaip galimą nestabilumo šaltinį.
+5. Paleisk tikrą `FriendFeed()` be `source` parametro.
+6. Patikrink:
+   - draugo šiandienos įrašas matomas su autoriaus vardu ir dainos
+     pavadinimu;
+   - draugo vakarykštis įrašas nematomas;
+   - ne draugo šiandienos įrašas nematomas;
+   - nerodomas tuščio srauto pranešimas ir krovimo indikatorius.
+7. Nenaudok `pumpAndSettle()`.
+8. Parašęs failą, testo nevykdyk ir failo nebetaisyk.
+
+## Išvesties formatas (Output format)
+
+1. Failas: `test/ld2_arnas/feed_integration_test.dart`.
+2. Pirma failo eilutė:
+   `// LD2 6.3 – Arnas: draugų srauto komponentų integracinis testas.`
+3. Vienas testas `I01 ...` grupėje `feed integration`.
+4. Atsakyme pateik tik testo veiksmų sąrašą ir paleidimo komandą.

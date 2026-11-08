@@ -1,0 +1,404 @@
+{"header" : {
+  "cloc_url"           : "github.com/AlDanial/cloc",
+  "cloc_version"       : "2.10",
+  "elapsed_seconds"    : 0.266757011413574,
+  "n_files"            : 78,
+  "n_lines"            : 13581,
+  "files_per_second"   : 292.40093666768,
+  "lines_per_second"   : 50911.5015497918,
+  "report_file"        : "C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\cloc_by_file.json"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_button_tabbar.dart" :{
+  "blank": 106,
+  "comment": 98,
+  "code": 661,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_util.dart" :{
+  "blank": 62,
+  "comment": 24,
+  "code": 481,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\backend.dart" :{
+  "blank": 32,
+  "comment": 5,
+  "code": 469,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\profile\\profile_widget.dart" :{
+  "blank": 30,
+  "comment": 11,
+  "code": 464,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\log_in_page\\log_in_page_widget.dart" :{
+  "blank": 13,
+  "comment": 0,
+  "code": 424,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\friends_list\\friends_list_widget.dart" :{
+  "blank": 22,
+  "comment": 2,
+  "code": 409,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_widgets.dart" :{
+  "blank": 28,
+  "comment": 14,
+  "code": 395,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\friends_list_add_friend\\friends_list_add_friend_widget.dart" :{
+  "blank": 19,
+  "comment": 1,
+  "code": 390,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\statistics\\statistics_widget.dart" :{
+  "blank": 26,
+  "comment": 10,
+  "code": 381,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\mantas\\authentication_test.dart" :{
+  "blank": 75,
+  "comment": 49,
+  "code": 374,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_theme.dart" :{
+  "blank": 23,
+  "comment": 2,
+  "code": 370,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_drop_down.dart" :{
+  "blank": 21,
+  "comment": 4,
+  "code": 367,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\mantas\\support\\fake_firestore.dart" :{
+  "blank": 64,
+  "comment": 31,
+  "code": 363,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\home\\home_widget.dart" :{
+  "blank": 26,
+  "comment": 9,
+  "code": 359,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\mantas\\post_emotion_test.dart" :{
+  "blank": 72,
+  "comment": 35,
+  "code": 351,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\nav\\nav.dart" :{
+  "blank": 40,
+  "comment": 17,
+  "code": 334,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_audio_player.dart" :{
+  "blank": 32,
+  "comment": 23,
+  "code": 325,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\firebase_auth_manager.dart" :{
+  "blank": 28,
+  "comment": 22,
+  "code": 305,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\tests\\statistics_widget_test.dart" :{
+  "blank": 65,
+  "comment": 1,
+  "code": 301,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\nav\\serialization_util.dart" :{
+  "blank": 26,
+  "comment": 5,
+  "code": 275,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\components\\music_search_sheet_widget.dart" :{
+  "blank": 16,
+  "comment": 3,
+  "code": 272,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\post\\post_widget.dart" :{
+  "blank": 23,
+  "comment": 7,
+  "code": 264,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\tests\\feed_widget_test.dart" :{
+  "blank": 36,
+  "comment": 1,
+  "code": 220,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\mantas\\support\\fake_auth.dart" :{
+  "blank": 55,
+  "comment": 21,
+  "code": 219,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\ui\\app_ui.dart" :{
+  "blank": 15,
+  "comment": 6,
+  "code": 190,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_icon_button.dart" :{
+  "blank": 10,
+  "comment": 0,
+  "code": 185,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\main.dart" :{
+  "blank": 26,
+  "comment": 2,
+  "code": 164,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\demo\\demo_data.dart" :{
+  "blank": 26,
+  "comment": 15,
+  "code": 153,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\mantas\\support\\test_env.dart" :{
+  "blank": 28,
+  "comment": 26,
+  "code": 152,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\tests\\feed_query_test.dart" :{
+  "blank": 36,
+  "comment": 1,
+  "code": 151,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_model.dart" :{
+  "blank": 18,
+  "comment": 26,
+  "code": 131,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\schema\\users_record.dart" :{
+  "blank": 28,
+  "comment": 9,
+  "code": 130,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\schema\\util\\firestore_util.dart" :{
+  "blank": 16,
+  "comment": 15,
+  "code": 119,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\flutter_flow_animations.dart" :{
+  "blank": 10,
+  "comment": 0,
+  "code": 102,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\schema\\user_post_record.dart" :{
+  "blank": 25,
+  "comment": 4,
+  "code": 92,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\schema\\friend_requests_record.dart" :{
+  "blank": 23,
+  "comment": 4,
+  "code": 88,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\schema\\music_record.dart" :{
+  "blank": 23,
+  "comment": 4,
+  "code": 86,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\tests\\helpers.dart" :{
+  "blank": 12,
+  "comment": 1,
+  "code": 75,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\firebase\\functions\\api_manager.js" :{
+  "blank": 9,
+  "comment": 1,
+  "code": 70,
+  "language": "JavaScript"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\components\\music_search_sheet_model.dart" :{
+  "blank": 11,
+  "comment": 6,
+  "code": 70,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\uploaded_file.dart" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 68,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\firebase_user_provider.dart" :{
+  "blank": 12,
+  "comment": 2,
+  "code": 62,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\auth_manager.dart" :{
+  "blank": 13,
+  "comment": 0,
+  "code": 61,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\auth_util.dart" :{
+  "blank": 18,
+  "comment": 2,
+  "code": 51,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\apple_auth.dart" :{
+  "blank": 11,
+  "comment": 13,
+  "code": 49,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\facebook_auth.dart" :{
+  "blank": 9,
+  "comment": 11,
+  "code": 46,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\tests\\statistics_query_test.dart" :{
+  "blank": 13,
+  "comment": 1,
+  "code": 42,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\place.dart" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 41,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\custom_functions.dart" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 34,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\base_auth_user_provider.dart" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 31,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\schema\\util\\schema_util.dart" :{
+  "blank": 9,
+  "comment": 0,
+  "code": 31,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\friends_list_add_friend\\friends_list_add_friend_model.dart" :{
+  "blank": 5,
+  "comment": 3,
+  "code": 24,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\post\\post_model.dart" :{
+  "blank": 4,
+  "comment": 4,
+  "code": 23,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\firebase\\functions\\index.js" :{
+  "blank": 4,
+  "comment": 1,
+  "code": 22,
+  "language": "JavaScript"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\friends_list\\friends_list_model.dart" :{
+  "blank": 5,
+  "comment": 3,
+  "code": 22,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\app_state.dart" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 21,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\custom_cloud_functions\\custom_cloud_function_response_manager.dart" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 20,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\keep_alive_wrapper.dart" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 20,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\google_auth.dart" :{
+  "blank": 4,
+  "comment": 1,
+  "code": 18,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\firebase\\firebase_config.dart" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 17,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\email_auth.dart" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 15,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\lat_lng.dart" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 15,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\form_field_controller.dart" :{
+  "blank": 6,
+  "comment": 3,
+  "code": 14,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\profile\\profile_model.dart" :{
+  "blank": 4,
+  "comment": 1,
+  "code": 13,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\home\\home_model.dart" :{
+  "blank": 4,
+  "comment": 2,
+  "code": 12,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\pages\\log_in_page\\log_in_page_model.dart" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 10,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\statistics\\statistics_model.dart" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 10,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\index.dart" :{
+  "blank": 0,
+  "comment": 1,
+  "code": 8,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\widget_test.dart" :{
+  "blank": 3,
+  "comment": 7,
+  "code": 7,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\test\\tests\\flutter_test_config.dart" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 6,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\github_auth.dart" :{
+  "blank": 2,
+  "comment": 3,
+  "code": 5,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\platform_utils\\platform_util_web.dart" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 4,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\anonymous_auth.dart" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 3,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\auth\\firebase_auth\\jwt_token_auth.dart" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 3,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\backend\\schema\\index.dart" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 3,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\platform_utils\\platform_util.dart" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 3,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\platform_utils\\platform_util_native.dart" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 3,
+  "language": "Dart"},
+"C:\\Users\\pedse\\Downloads\\musicreal_ld2_final\\source_snapshot\\lib\\flutter_flow\\platform_utils\\platform_util_stub.dart" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 2,
+  "language": "Dart"},
+"SUM": {
+  "blank": 1438,
+  "comment": 573,
+  "code": 11570,
+  "nFiles": 78} }

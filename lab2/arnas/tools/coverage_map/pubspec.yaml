@@ -1,0 +1,7 @@
+name: coverage_map
+description: LD2 (Arnas) – sakinių ir sprendimų sąrašas iš Dart AST padengimui skaičiuoti.
+publish_to: none
+environment:
+  sdk: ^3.12.0
+dependencies:
+  analyzer: 14.5.0

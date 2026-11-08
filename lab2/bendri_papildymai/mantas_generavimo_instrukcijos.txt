@@ -1,0 +1,7 @@
+Asistentas: Codex šiame pokalbyje. Data: 2026-10-20.
+Tikslus modelio identifikatorius neišsaugotas.
+Generuota tęstinėje sesijoje. Tai instrukcijų santrauka, ne pažodinis atskiros vienkartinės užklausos tekstas.
+
+Task: Write deterministic Flutter component tests for the actual PostWidget, using the existing platform fakes in test/mantas/support/test_env.dart.
+Rules: Do not alter production logic. Inject a real PostModel using the existing Provider/createModel seam. Cover selected/unselected styles, selection replacement and repeated selection; validation guards including empty song, empty emotion, non-http emotion, 500/501-character boundary and trimming; first/gap/yesterday/today streak behavior; a corrected retry after validation. Run DEMO=true separately. Add a component integration test from upload through fake Firestore to actual StatisticsWidget. Keep existing product failures separate from test harness issues.
+Output: runnable Dart test files, preserved first version, analyzer and execution logs, coverage artifacts, case-by-case results and limitations.

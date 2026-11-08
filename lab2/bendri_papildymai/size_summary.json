@@ -1,0 +1,53 @@
+{
+  "commit": "d90e75ae77d128f895771bfc709856d50ddaf8d6",
+  "tool": "cloc 2.10",
+  "groups": {
+    "FlutterFlow pagalbiniai failai (lib/flutter_flow/)": {
+      "files": 21,
+      "LOC": 4459,
+      "CLOC": 216,
+      "NCLOC": 3830,
+      "blank": 413
+    },
+    "Kiti programos Dart failai (lib/)": {
+      "files": 43,
+      "LOC": 6119,
+      "CLOC": 181,
+      "NCLOC": 5387,
+      "blank": 551
+    },
+    "Esami testai (test/, HEAD)": {
+      "files": 12,
+      "LOC": 2896,
+      "CLOC": 174,
+      "NCLOC": 2261,
+      "blank": 461
+    },
+    "Serverio JavaScript (firebase/functions/)": {
+      "files": 2,
+      "LOC": 107,
+      "CLOC": 2,
+      "NCLOC": 92,
+      "blank": 13
+    }
+  },
+  "application_total": {
+    "files": 66,
+    "LOC": 10685,
+    "CLOC": 399,
+    "NCLOC": 9309,
+    "blank": 977
+  },
+  "all_including_tests": {
+    "blank": 1438,
+    "comment": 573,
+    "code": 11570,
+    "nFiles": 78
+  },
+  "definitions": {
+    "LOC": "blank + comment + code",
+    "CLOC": "cloc comment: comment-only lines",
+    "NCLOC": "cloc code: nonblank code lines, including code with trailing comments"
+  },
+  "scope": "Tracked lib/**/*.dart, test/**/*.dart, firebase/functions/**/*.js except dotfiles. Tests reported separately; later untracked LD2 tests excluded."
+}

@@ -1,0 +1,8 @@
+00:00 +0: loading C:/Users/pedse/Downloads/musicreal/test/ld2_statistics_check/statements_check_test.dart
+00:00 +0: (setUpAll)
+00:00 +0: V01 empty posts show empty state
+00:00 +1: V02 duplicates and missing fields exercise aggregation
+00:00 +2: V03 top songs are limited to ten
+00:01 +3: (tearDownAll)
+STATISTICS_PROBE={"statements":{},"decisions":{}}
+00:02 +3: All tests passed!

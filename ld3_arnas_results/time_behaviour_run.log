@@ -1,0 +1,32 @@
+00:00 +0: loading /home/arnas/Documents/GitHub/musicreal/test/ld3_arnas/time_behaviour_test.dart
+00:00 +0: (setUpAll)
+00:00 +0: L1 srauto įkėlimo laikas kliente L1 1 įrašų (1 draugų)
+RESULT | L1 | 1_irasu | iki pilno srauto 44,4 ms (38,1–49,0); kadrų 5; ilgiausias kadras 12,2 ms (10,5–13,0); kortelių ekrane 1 iš 1
+00:01 +1: L1 srauto įkėlimo laikas kliente L1 10 įrašų (10 draugų)
+RESULT | L1 | 10_irasu | iki pilno srauto 131,3 ms (115,8–150,6); kadrų 5; ilgiausias kadras 59,5 ms (52,8–66,0); kortelių ekrane 5 iš 10
+00:03 +2: L1 srauto įkėlimo laikas kliente L1 30 įrašų (30 draugų)
+RESULT | L1 | 30_irasu | iki pilno srauto 249,0 ms (203,1–336,8); kadrų 5; ilgiausias kadras 118,3 ms (91,3–194,7); kortelių ekrane 5 iš 30
+00:06 +3: L1 srauto įkėlimo laikas kliente L1 100 įrašų (30 draugų)
+RESULT | L1 | 100_irasu | iki pilno srauto 733,8 ms (609,5–816,1); kadrų 5; ilgiausias kadras 344,2 ms (263,9–471,5); kortelių ekrane 5 iš 100
+00:14 +4: L1-M srauto įkėlimas su modeliuotu tinklo vėlinimu L1-M 10 įrašų, RTT 100 ms
+RESULT | L1-M | 10_irasu_RTT_100ms | įrašų sąrašas 100 ms → autoriai 200 ms → grotuvai 305 ms (3,0 × RTT); užklausų 21
+00:14 +5: L1-M srauto įkėlimas su modeliuotu tinklo vėlinimu L1-M 30 įrašų, RTT 100 ms
+RESULT | L1-M | 30_irasu_RTT_100ms | įrašų sąrašas 100 ms → autoriai 200 ms → grotuvai 305 ms (3,0 × RTT); užklausų 61
+00:15 +6: L1-M srauto įkėlimas su modeliuotu tinklo vėlinimu L1-M 10 įrašų, RTT 300 ms
+RESULT | L1-M | 10_irasu_RTT_300ms | įrašų sąrašas 300 ms → autoriai 600 ms → grotuvai 905 ms (3,0 × RTT); užklausų 21
+00:16 +7: L1-M srauto įkėlimas su modeliuotu tinklo vėlinimu L1-M 30 įrašų, RTT 300 ms
+RESULT | L1-M | 30_irasu_RTT_300ms | įrašų sąrašas 300 ms → autoriai 600 ms → grotuvai 905 ms (3,0 × RTT); užklausų 61
+00:17 +8: L2 naujo draugo įrašo pasirodymo laikas L2 srautas su 1 įrašų (1 draugų)
+RESULT | L2 | 1_irasu | iki parodytos naujos kortelės 22,9 ms (18,1–33,2); kadrų 4; ilgiausias kadras 7,2 ms (5,2–9,5); kadrų su neatitinkančiu autoriumi 0
+00:17 +9: L2 naujo draugo įrašo pasirodymo laikas L2 srautas su 10 įrašų (10 draugų)
+RESULT | L2 | 10_irasu | iki parodytos naujos kortelės 75,2 ms (68,0–129,8); kadrų 4; ilgiausias kadras 29,1 ms (25,9–41,7); kadrų su neatitinkančiu autoriumi 1
+00:19 +10: L2 naujo draugo įrašo pasirodymo laikas L2 srautas su 30 įrašų (30 draugų)
+RESULT | L2 | 30_irasu | iki parodytos naujos kortelės 157,4 ms (135,6–237,0); kadrų 4; ilgiausias kadras 62,4 ms (51,8–118,4); kadrų su neatitinkančiu autoriumi 1
+00:23 +11: L2 naujo draugo įrašo pasirodymo laikas L2 srautas su 100 įrašų (30 draugų)
+RESULT | L2 | 100_irasu | iki parodytos naujos kortelės 457,1 ms (420,4–546,4); kadrų 4; ilgiausias kadras 171,0 ms (165,4–240,3); kadrų su neatitinkančiu autoriumi 1
+00:34 +12: L1-DB kontrolinis: su fake_cloud_firestore L1-DB 10 įrašų (10 draugų)
+RESULT | L1-DB | 10_irasu | iki pilno srauto 149,0 ms (141,2–252,6); kadrų 5; ilgiausias kadras 108,1 ms (99,1–185,4)
+00:35 +13: L1-DB kontrolinis: su fake_cloud_firestore L1-DB 30 įrašų (30 draugų)
+RESULT | L1-DB | 30_irasu | iki pilno srauto 489,6 ms (447,4–576,8); kadrų 5; ilgiausias kadras 326,4 ms (305,1–460,7)
+00:39 +14: (tearDownAll)
+00:39 +14: All tests passed!

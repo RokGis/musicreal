@@ -1,0 +1,87 @@
+## Užduotis (Task)
+
+Esi Dart ir Flutter testų inžinierius. Parašyk valdiklių testus (widget tests)
+metodui `FriendFeed.build()` iš failo `lib/pages/home/home_widget.dart`.
+
+Prieš rašydamas testus perskaityk:
+- klases `FeedSource` ir `FriendFeed` faile `lib/pages/home/home_widget.dart`;
+- `AppUi.emptyState()` ir `AppUi.loader()` faile `lib/ui/app_ui.dart`;
+- duomenų paruošimo pagalbininkus faile `test/tests/helpers.dart`.
+
+`FriendFeed` duomenis gauna per konstruktoriaus parametrą `source`. Testuose
+sukurk `FeedSource` poklasį (fake), kuris vietoje Firestore grąžina testo
+nurodytus draugus, įrašus, autorius ir dainas. Tikslas – padengti visas
+`build()` vykdymo šakas ir patikrinti, ką naudotojas mato kiekvienoje
+būsenoje.
+
+## Taisyklės (Rules)
+
+1. Nekeisk failų kataloge `lib/`, `pubspec.yaml` ir esamų testų
+   (`test/tests/`, `test/mantas/`, `test/widget_test.dart`). Sukurk tik vieną
+   naują failą, nurodytą išvesties formate.
+2. Gali naudoti duomenų paruošimo pagalbininkus iš `test/tests/helpers.dart`
+   (pvz., `post`, `user`, `userRef`, `host`, `useTallScreen`). Nekopijuok LD1
+   testų iš `test/tests/` (ir jų `FakeFeedSource`) ir neperrašyk tikrinamo
+   metodo logikos teste.
+3. Naudok tik jau įdiegtus paketus: `flutter_test`, `fake_cloud_firestore`
+   (tik `DocumentReference` sukūrimui), `go_router` ir
+   `package:project_for_management/...`. Naujų priklausomybių nepridėk.
+   Nenaudok tikro Firebase, tinklo ir `Firebase.initializeApp()`.
+4. Testai turi būti deterministiniai. Nenaudok `DateTime.now()` ir
+   `getCurrentTimestamp`.
+5. Kiekvienas testas kuria savo fake šaltinį ir iš naujo paleidžia valdiklį
+   (`tester.pumpWidget`). Testai nepriklauso nuo vykdymo eilės.
+6. Krovimo indikatorius sukasi be pabaigos, todėl `pumpAndSettle()`
+   nenaudok būsenose, kuriose jis rodomas. Naudok `pump()` arba
+   `pump(Duration)`.
+7. Tikrink tai, ką mato naudotojas: tekstus, mygtukus,
+   `CircularProgressIndicator`, įrašų skaičių ir tvarką. Netikrink vidinės
+   valdiklių struktūros, pvz., `Padding` ar `SizedBox` skaičiaus.
+8. Mygtukas „Find friends“ naviguoja per `go_router`
+   (`context.pushNamed(FriendsListAddFriendWidget.routeName)`). Tikram
+   `FriendsListAddFriendWidget` ekranui reikia Firebase, todėl testuose jo
+   kurti negalima.
+9. Vienas testas tikrina vieną būseną ar elgesį. Testo pavadinimas –
+   angliškai, formatu `<ID> <sąlyga> → <laukiamas rezultatas>`.
+10. Venk perteklinių testų. Kiekvieną žemiau nurodytą situaciją tikrink vieną
+    kartą. Netestuok `_postCard()` ir `_player()` detalių – pakanka, kad
+    įrašas parodomas su autoriaus vardu ir dainos pavadinimu.
+11. Jei kode nėra atskiros šakos kuriai nors situacijai, testas turi tikrinti
+    faktinį dabartinio kodo elgesį, o komentare nurodyk galimą defektą.
+    Programos kodo nekeisk.
+12. Parašęs failą, testų nevykdyk ir failo nebetaisyk. Kompiliavimas ir
+    vykdymas bus atliekami atskirai, o vertinamas bus pradinis variantas.
+
+## Tikrintinos situacijos
+
+Normalus veikimas:
+- N1. Draugų nėra: rodoma tuščio srauto būsena su mygtuku „Find friends“, o
+  `todaysPosts()` nekviečiamas.
+- N2. Draugai yra, srautas grąžina du įrašus: rodomi abu įrašai su autoriaus
+  vardu ir dainos pavadinimu, ta tvarka, kurią grąžino srautas;
+  `todaysPosts()` gauna tą patį sąrašą, kurį grąžino `friends()`.
+- N3. Draugai yra, srautas grąžina tuščią sąrašą: rodoma „No posts today“
+  būsena.
+- N4. Paspaudus „Find friends“, atidaromas maršrutas
+  `FriendsListAddFriendWidget.routeName`.
+
+Kraštinės būsenos:
+- B1. Draugai yra, bet srautas dar negrąžino duomenų: rodomas krovimo
+  indikatorius ir nerodomas joks tuščio srauto pranešimas.
+- B2. Srautas iš pradžių negrąžina duomenų, vėliau grąžina vieną įrašą:
+  indikatorius dingsta, įrašas parodomas.
+
+Klaidingi duomenys:
+- X1. Srautas grąžina klaidą (`Stream.error(...)`): iš kodo nustatyk, kas
+  rodoma naudotojui, ir tai užfiksuok testu.
+
+## Išvesties formatas (Output format)
+
+1. Vienas failas: `test/ld2_arnas/friend_feed_build_test.dart`.
+2. Pirma failo eilutė: `// LD2 8 užduotis – Arnas: FriendFeed.build() testai.`
+3. Struktūra: `void main()` → `group('FriendFeed.build', ...)` → testai
+   `F01`, `F02`, ...
+4. Sukūręs failą, atsakyme pateik tik:
+   - lentelę `ID | Situacija (N1…X1) | Testo pavadinimas | Kurią build() sąlygą ir kokią jos baigtį (true/false) padengia | Ką tikrina expect`;
+   - sąrašą „Netestuota“ su priežastimis;
+   - komandą testams paleisti.

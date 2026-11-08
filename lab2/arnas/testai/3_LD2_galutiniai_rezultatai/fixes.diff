@@ -1,0 +1,110 @@
+diff -u lab2/arnas/results/first_version/test_ld2_arnas/friend_feed_build_test.dart test/ld2_arnas/friend_feed_build_test.dart
+--- lab2/arnas/results/first_version/test_ld2_arnas/friend_feed_build_test.dart	2026-10-25 17:17:35.756733746 +0200
++++ test/ld2_arnas/friend_feed_build_test.dart	2026-10-25 17:19:50.224857746 +0200
+@@ -59,13 +59,20 @@
+ 
+   setUpAll(() => GoogleFonts.config.allowRuntimeFetching = false);
+ 
++  /// Lets the stream builders deliver their events: posts → author of each
++  /// card → song of each card, one frame each.
++  Future<void> flushStreams(WidgetTester tester) async {
++    for (var frame = 0; frame < 3; frame++) {
++      await tester.pump();
++    }
++  }
++
+   /// Shows the feed and lets the streams deliver their first events.
+   Future<void> showFeed(WidgetTester tester, StubFeedSource source) async {
+     await tester.pumpWidget(host(SingleChildScrollView(
+       child: FriendFeed(source: source),
+     )));
+-    await tester.pump();
+-    await tester.pump();
++    await flushStreams(tester);
+   }
+ 
+   group('FriendFeed.build', () {
+@@ -178,8 +185,7 @@
+           reason: 'before the first event');
+ 
+       posts.add([post(aiste, 'p1', song: 'Morning Light', createdAt: today)]);
+-      await tester.pump();
+-      await tester.pump();
++      await flushStreams(tester);
+ 
+       expect(find.byType(CircularProgressIndicator), findsNothing);
+       expect(find.text('Morning Light'), findsOneWidget);
+diff -u lab2/arnas/results/first_version/test_ld2_arnas/friends_feed_query_test.dart test/ld2_arnas/friends_feed_query_test.dart
+--- lab2/arnas/results/first_version/test_ld2_arnas/friends_feed_query_test.dart	2026-10-25 17:17:35.756775214 +0200
++++ test/ld2_arnas/friends_feed_query_test.dart	2026-10-25 17:19:50.224612854 +0200
+@@ -5,6 +5,7 @@
+ import 'package:project_for_management/backend/backend.dart';
+ import 'package:project_for_management/pages/home/home_widget.dart';
+ 
++import '../mantas/support/test_env.dart' as env;
+ import '../tests/helpers.dart';
+ 
+ void main() {
+@@ -100,16 +101,6 @@
+       expect(await feedIds([aiste]), ['withDate']);
+     });
+ 
+-    test('Q08 empty friends list → no posts returned', () async {
+-      // fake_cloud_firestore evaluates `whereIn: []` as "matches nothing".
+-      // Real cloud_firestore asserts "'in' filters require a non-empty
+-      // [Iterable]", so in the app FriendFeed.build() must not call the query
+-      // with an empty list (it shows the empty state first).
+-      await addPost(db, aiste, 'a1', song: 'A', createdAt: DateTime(2026, 10, 3, 9));
+-
+-      expect(await feedIds([]), isEmpty);
+-    });
+-
+     test('Q09 more than 30 friends → query fails with ArgumentError', () async {
+       // Possible defect: whereIn accepts at most 30 values (Firestore limit;
+       // fake_cloud_firestore throws ArgumentError, real cloud_firestore
+@@ -124,4 +115,45 @@
+       await expectLater(() => feedIds(friends), throwsArgumentError);
+     });
+   });
++
++  group('friendsFeedQuery with the real cloud_firestore query code', () {
++    // fake_cloud_firestore cannot run where() without a condition (it throws
++    // 'Unsupported'), so this case uses the platform-level fake from
++    // test/mantas/support: the real cloud_firestore Query code builds the query.
++    setUpAll(env.setUpMusicRealTestEnv);
++    setUp(env.resetMusicRealTestEnv);
++
++    test('Q08 empty friends list → no friend filter, every post of today returned',
++        () async {
++      // Possible defect: friendsFeedQuery() uses the FlutterFlow extension
++      // QueryExtension.whereIn (lib/backend/backend.dart), which turns an empty
++      // list into where(field, whereIn: null), i.e. no condition at all. The
++      // query then returns today's posts of all users. In the app
++      // FriendFeed.build() shows the empty state before calling it.
++      env.fakeFirestore.seed('users/aiste/userPost/a1', {
++        'song_name': 'A',
++        'post_user': env.userRef('aiste'),
++        'created_at': DateTime(2026, 10, 3, 9),
++      });
++      env.fakeFirestore.seed('users/stranger/userPost/s1', {
++        'song_name': 'B',
++        'post_user': env.userRef('stranger'),
++        'created_at': DateTime(2026, 10, 3, 10),
++      });
++      env.fakeFirestore.seed('users/aiste/userPost/old', {
++        'song_name': 'C',
++        'post_user': env.userRef('aiste'),
++        'created_at': DateTime(2026, 10, 2, 9),
++      });
++
++      final snapshot = await friendsFeedQuery(
++        FirebaseFirestore.instance.collectionGroup('userPost'),
++        const <DocumentReference>[],
++        kNow,
++      ).get();
++
++      expect(snapshot.docs.map((doc) => doc.id).toList(), ['s1', 'a1'],
++          reason: 'without friends only the start-of-today filter remains');
++    });
++  });
+ }

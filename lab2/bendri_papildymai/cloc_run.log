@@ -1,0 +1,14 @@
+COMMAND: C:\Users\pedse\Downloads\musicreal_ld2_final\tools\cloc-2.10.exe C:\Users\pedse\Downloads\musicreal_ld2_final\source_snapshot --by-file --json --skip-uniqueness --out=C:\Users\pedse\Downloads\musicreal_ld2_final\cloc_by_file.json
+      78 text files.
+classified 78 files
+      78 unique files.                              
+       0 files ignored.
+Wrote C:\Users\pedse\Downloads\musicreal_ld2_final\cloc_by_file.json
+
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").

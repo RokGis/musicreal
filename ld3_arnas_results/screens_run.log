@@ -1,0 +1,12 @@
+00:00 +0: loading /home/arnas/Documents/GitHub/musicreal/test/ld3_arnas/screens_test.dart
+00:00 +0: (setUpAll)
+00:00 +0: S1–S3 srautas, naujas įrašas ir neatitinkantys autoriai
+SCREENSHOT | ld3_arnas_results/screenshots/S1_srautas_10_irasu.png
+S2: kortelių su neatitinkančiu autoriumi: 10
+SCREENSHOT | ld3_arnas_results/screenshots/S2_naujas_irasas_pirmas_kadras_neatitinka_autoriai.png
+SCREENSHOT | ld3_arnas_results/screenshots/S3_naujas_irasas_po_3_kadru.png
+00:02 +1: S4 release modelis: užklausą atmeta platforma – begalinis indikatorius
+Error querying Instance of '_JsonQuery': [cloud_firestore/invalid-argument] modeled: platform rejected the feed query ('in' filter with more than 30 values)
+SCREENSHOT | ld3_arnas_results/screenshots/S4_release_modelis_po_10s_begalinis_indikatorius.png
+00:02 +2: (tearDownAll)
+00:02 +2: All tests passed!

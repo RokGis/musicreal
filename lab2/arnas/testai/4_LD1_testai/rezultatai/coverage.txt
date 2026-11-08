@@ -1,0 +1,57 @@
+LCOV: lab2/arnas/results/baseline_ld1/lcov.info
+
+== friendsFeedQuery  (lib/pages/home/home_widget.dart:182-192) ==
+Eilutės (DA): 4/4 (100,0 %)
+  L184  įvykdyta   Query friendsFeedQuery(
+  L190  įvykdyta   .whereIn('post_user', friends)
+  L191  įvykdyta   .where('created_at', isGreaterThanOrEqualTo: functions.startOfDay(
+  L192  įvykdyta   .orderBy('created_at', descending: true);
+VM šakų taškai (BRDA): 1/1 (100,0 %)  nepasiekti: nėra
+Sakiniai (AST + DA): 1/1 (100,0 %)
+  S1   L188  DA L190  įvykdytas   ExpressionFunctionBody (=>)  userPostRecord
+Sprendimų baigtys (if true/false): netaikoma (0)
+  Sprendimų nėra: vienintelis kelias įėjimas → išėjimas.
+
+== FriendFeed.build  (lib/pages/home/home_widget.dart:345-393) ==
+Eilutės (DA): 21/23 (91,3 %)
+  L345  įvykdyta   @override
+  L347  įvykdyta   final friends = source.friends();
+  L349  įvykdyta   if (friends.isEmpty) {
+  L350  įvykdyta   return AppUi.emptyState(
+  L355  įvykdyta   action: FFButtonWidget(
+  L356  NEĮVYKDYTA onPressed: () async {
+  L357  NEĮVYKDYTA context.pushNamed(FriendsListAddFriendWidget.routeName);
+  L360  įvykdyta   options: AppUi.primaryButton(context),
+  L365  įvykdyta   return StreamBuilder<List<UserPostRecord>>(
+  L366  įvykdyta   stream: source.todaysPosts(friends),
+  L367  įvykdyta   builder: (context, snapshot) {
+  L368  įvykdyta   if (!snapshot.hasData) {
+  L369  įvykdyta   return Padding(
+  L370  įvykdyta   padding: EdgeInsets.only(top: 48.0),
+  L371  įvykdyta   child: AppUi.loader(context),
+  L374  įvykdyta   final posts = snapshot.data!;
+  L375  įvykdyta   if (posts.isEmpty) {
+  L376  įvykdyta   return AppUi.emptyState(
+  L384  įvykdyta   return ListView.builder(
+  L385  įvykdyta   padding: EdgeInsets.only(top: AppUi.gap, bottom: 96.0),
+  L387  įvykdyta   physics: NeverScrollableScrollPhysics(),
+  L388  įvykdyta   itemCount: posts.length,
+  L389  įvykdyta   itemBuilder: (context, index) => _postCard(context, posts[index]),
+VM šakų taškai (BRDA): 6/7 (85,7 %)  nepasiekti: [356]
+Sakiniai (AST + DA): 11/12 (91,7 %)
+  S1   L347  DA L347  įvykdytas   VariableDeclarationStatement final friends = source.friends();
+  S2   L349  DA L349  įvykdytas   IfStatement                  if (friends.isEmpty) {
+  S3   L350  DA L350  įvykdytas   ReturnStatement              return AppUi.emptyState(
+  S4   L357  DA L357  NEĮVYKDYTAS ExpressionStatement          context.pushNamed(FriendsListAddFriendWidget
+  S5   L365  DA L365  įvykdytas   ReturnStatement              return StreamBuilder<List<UserPostRecord>>(
+  S6   L368  DA L368  įvykdytas   IfStatement                  if (!snapshot.hasData) {
+  S7   L369  DA L369  įvykdytas   ReturnStatement              return Padding(
+  S8   L374  DA L374  įvykdytas   VariableDeclarationStatement final posts = snapshot.data!;
+  S9   L375  DA L375  įvykdytas   IfStatement                  if (posts.isEmpty) {
+  S10  L376  DA L376  įvykdytas   ReturnStatement              return AppUi.emptyState(
+  S11  L384  DA L384  įvykdytas   ReturnStatement              return ListView.builder(
+  S12  L389  DA L389  įvykdytas   ExpressionFunctionBody (=>)  _postCard(context, posts[index])
+Sprendimų baigtys (if true/false): 6/6 (100,0 %)
+  D1 L349 if (friends.isEmpty): true pasiekta (S3), false pasiekta (S5; kitas sakinys po if (then šaka baigiasi return/throw))
+  D2 L368 if (!snapshot.hasData): true pasiekta (S7), false pasiekta (S8; kitas sakinys po if (then šaka baigiasi return/throw))
+  D3 L375 if (posts.isEmpty): true pasiekta (S10), false pasiekta (S11; kitas sakinys po if (then šaka baigiasi return/throw))
